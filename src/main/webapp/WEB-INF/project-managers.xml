@@ -31,6 +31,17 @@
                         <value>echonest_artist_data.videoEntryItem</value>
                     </list>
                 </entry>
+                <entry key="echonest_jazz">
+                    <list>
+                        <value>echonest_jazz.imagesEntryItem</value>
+                        <value>echonest_jazz.status</value>
+                        <value>echonest_jazz.response</value>
+                        <value>echonest_jazz.license</value>
+                        <value>echonest_jazz.RootResponse</value>
+                        <value>echonest_jazz.songsEntryItem</value>
+                        <value>echonest_jazz.artistsEntryItem</value>
+                    </list>
+                </entry>
                 <entry key="echonest_list_genres">
                     <list>
                         <value>echonest_list_genres.genresEntryItem</value>

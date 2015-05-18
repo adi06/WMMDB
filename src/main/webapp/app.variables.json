@@ -124,11 +124,12 @@
 		"service": "echonest_list_genres",
 		"operation": "invoke",
 		"operationType": null,
-		"startUpdate": false,
+		"startUpdate": true,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
-		"transformationRequired": true,
-		"columnField": "response.genres[0].name",
+		"transformationRequired": false,
+		"columnField": "response.genres",
+		"dataField": "response.genres[0].name",
 		"serviceType": "RestService",
 		"category": "wm.ServiceVariable",
 		"isDefault": true,
@@ -151,6 +152,7 @@
 		"transformationColumns": []
 	},
 	"artist_serviceVariable": {
+		"name": "artist_serviceVariable",
 		"type": "echonest_artist.RootResponse",
 		"isList": false,
 		"owner": "App",
@@ -160,7 +162,7 @@
 		"dataBinding": {
 			"dataValue": "",
 			"api_key": "9DHD6YRBIEQATUGO2",
-			"name": "bind:Widgets.select1.datavalue"
+			"name": "bind:Widgets.select2.datavalue"
 		},
 		"saveInPhonegap": false,
 		"firstRow": 0,
@@ -178,7 +180,6 @@
 		"serviceType": "RestService",
 		"category": "wm.ServiceVariable",
 		"_id": "wm-wm.ServiceVariable1431930675942",
-		"name": "artist_serviceVariable",
 		"wmServiceOperationInfo": {
 			"httpMethod": "GET",
 			"name": "invoke",
@@ -202,5 +203,55 @@
 			],
 			"relativePath": "/echonest_artist/invoke"
 		}
+	},
+	"jazz_serviceVariable": {
+		"name": "jazz_serviceVariable",
+		"type": "echonest_jazz.RootResponse",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": {
+			"api_key": "9DHD6YRBIEQATUGO2",
+			"name": "jazz"
+		},
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "echonest_jazz",
+		"operation": "invoke",
+		"operationType": null,
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "RestService",
+		"wmServiceOperationInfo": {
+			"httpMethod": "GET",
+			"name": "invoke",
+			"parameters": [
+				{
+					"name": "api_key",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "name",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "bucket",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "format",
+					"parameterType": "QUERY"
+				}
+			],
+			"relativePath": "/echonest_jazz/invoke"
+		},
+		"category": "wm.ServiceVariable",
+		"_id": "wm-wm.ServiceVariable1431936859418"
 	}
 }

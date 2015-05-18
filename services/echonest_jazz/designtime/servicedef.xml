@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="echonest_jazz" CRUDService="false" type="RestService" springFile="echonest_jazz.spring.xml">
+    <operation name="invoke">
+        <parameter name="api_key" typeRef="java.lang.String" isList="false"/>
+        <parameter name="name" typeRef="java.lang.String" isList="false"/>
+        <parameter name="bucket" typeRef="java.lang.String" isList="true"/>
+        <parameter name="format" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="echonest_jazz.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="echonest_jazz.imagesEntryItem" name="imagesEntryItem" supportsQuickData="false">
+            <element name="tags" isList="true" allowNull="false"/>
+            <element name="height" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="verified" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="width" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="license" typeRef="echonest_jazz.license" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="aspect_ratio" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="echonest_jazz.status" name="status" supportsQuickData="false">
+            <element name="message" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="code" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="version" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="echonest_jazz.response" name="response" supportsQuickData="false">
+            <element name="artists" typeRef="echonest_jazz.artistsEntryItem" isList="true" allowNull="false"/>
+            <element name="status" typeRef="echonest_jazz.status" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="echonest_jazz.license" name="license" supportsQuickData="false">
+            <element name="type" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="attribution" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="echonest_jazz.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="response" typeRef="echonest_jazz.response" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="echonest_jazz.songsEntryItem" name="songsEntryItem" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="echonest_jazz.artistsEntryItem" name="artistsEntryItem" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="songs" typeRef="echonest_jazz.songsEntryItem" isList="true" allowNull="false"/>
+            <element name="hotttnesss" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="images" typeRef="echonest_jazz.imagesEntryItem" isList="true" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>
