@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="artist_image" CRUDService="false" type="RestService" springFile="artist_image.spring.xml">
+    <operation name="invoke">
+        <parameter name="id" typeRef="java.lang.String" isList="false"/>
+        <parameter name="results" typeRef="java.lang.String" isList="false"/>
+        <parameter name="api_key" typeRef="java.lang.String" isList="false"/>
+        <parameter name="format" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="artist_image.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="artist_image.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="response" typeRef="artist_image.response" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_image.imagesEntryItem" name="imagesEntryItem" supportsQuickData="false">
+            <element name="tags" isList="true" allowNull="false"/>
+            <element name="verified" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="license" typeRef="artist_image.license" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_image.response" name="response" supportsQuickData="false">
+            <element name="total" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="start" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="status" typeRef="artist_image.status" isList="false" allowNull="false"/>
+            <element name="images" typeRef="artist_image.imagesEntryItem" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_image.status" name="status" supportsQuickData="false">
+            <element name="message" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="code" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="version" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_image.license" name="license" supportsQuickData="false">
+            <element name="type" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="attribution" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

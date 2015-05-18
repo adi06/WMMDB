@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="artist_video" CRUDService="false" type="RestService" springFile="artist_video.spring.xml">
+    <operation name="invoke">
+        <parameter name="id" typeRef="java.lang.String" isList="false"/>
+        <parameter name="results" typeRef="java.lang.String" isList="false"/>
+        <parameter name="api_key" typeRef="java.lang.String" isList="false"/>
+        <parameter name="format" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="artist_video.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="artist_video.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="response" typeRef="artist_video.response" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_video.videoEntryItem" name="videoEntryItem" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="site" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="image_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="date_found" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_video.response" name="response" supportsQuickData="false">
+            <element name="total" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="start" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="status" typeRef="artist_video.status" isList="false" allowNull="false"/>
+            <element name="video" typeRef="artist_video.videoEntryItem" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_video.status" name="status" supportsQuickData="false">
+            <element name="message" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="code" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="version" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

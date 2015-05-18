@@ -3,6 +3,55 @@
     <bean class="com.wavemaker.runtime.service.TypeManager" parent="typeManagerBase" scope="singleton" id="typeManager">
         <property name="types">
             <map merge="true">
+                <entry key="artist_id_name">
+                    <list>
+                        <value>artist_id_name.response</value>
+                        <value>artist_id_name.RootResponse</value>
+                        <value>artist_id_name.artistsEntryItem</value>
+                        <value>artist_id_name.status</value>
+                    </list>
+                </entry>
+                <entry key="artist_image">
+                    <list>
+                        <value>artist_image.RootResponse</value>
+                        <value>artist_image.imagesEntryItem</value>
+                        <value>artist_image.response</value>
+                        <value>artist_image.status</value>
+                        <value>artist_image.license</value>
+                    </list>
+                </entry>
+                <entry key="artist_songs">
+                    <list>
+                        <value>artist_songs.status</value>
+                        <value>artist_songs.response</value>
+                        <value>artist_songs.RootResponse</value>
+                        <value>artist_songs.songsEntryItem</value>
+                    </list>
+                </entry>
+                <entry key="artist_url">
+                    <list>
+                        <value>artist_url.response</value>
+                        <value>artist_url.urls</value>
+                        <value>artist_url.status</value>
+                        <value>artist_url.RootResponse</value>
+                    </list>
+                </entry>
+                <entry key="artist_video">
+                    <list>
+                        <value>artist_video.RootResponse</value>
+                        <value>artist_video.videoEntryItem</value>
+                        <value>artist_video.response</value>
+                        <value>artist_video.status</value>
+                    </list>
+                </entry>
+                <entry key="echonest">
+                    <list>
+                        <value>echonest.genresEntryItem</value>
+                        <value>echonest.status</value>
+                        <value>echonest.response</value>
+                        <value>echonest.RootResponse</value>
+                    </list>
+                </entry>
                 <entry key="echonest_artist">
                     <list>
                         <value>echonest_artist.videoEntryItem</value>
@@ -50,6 +99,14 @@
                         <value>echonest_list_genres.status</value>
                     </list>
                 </entry>
+                <entry key="list_genres">
+                    <list>
+                        <value>list_genres.genresEntryItem</value>
+                        <value>list_genres.status</value>
+                        <value>list_genres.RootResponse</value>
+                        <value>list_genres.response</value>
+                    </list>
+                </entry>
                 <entry key="metabroadcast">
                     <list>
                         <value>metabroadcast.broadcastsEntryItem</value>
@@ -68,6 +125,15 @@
                         <value>metabroadcast.display_title</value>
                         <value>metabroadcast.series</value>
                         <value>metabroadcast.schedule_date</value>
+                    </list>
+                </entry>
+                <entry key="profile_genre">
+                    <list>
+                        <value>profile_genre.status</value>
+                        <value>profile_genre.urls</value>
+                        <value>profile_genre.genresEntryItem</value>
+                        <value>profile_genre.response</value>
+                        <value>profile_genre.RootResponse</value>
                     </list>
                 </entry>
             </map>

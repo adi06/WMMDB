@@ -1,0 +1,16 @@
+{
+	"methods": [{
+		"operationType": null,
+		"name": "invoke",
+		"parameters": [{
+			"name": "api_key",
+			"type": "java.lang.String"
+		}, {
+			"name": "format",
+			"type": "java.lang.String"
+		}],
+		"returnType": "echonest.RootResponse"
+	}],
+	"serviceURL": "echonest.json",
+	"serviceType": "JSON-RPC"
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="list_genres" CRUDService="false" type="RestService" springFile="list_genres.spring.xml">
+    <operation name="invoke">
+        <parameter name="api_key" typeRef="java.lang.String" isList="false"/>
+        <parameter name="format" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="list_genres.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="list_genres.genresEntryItem" name="genresEntryItem" supportsQuickData="false">
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="list_genres.status" name="status" supportsQuickData="false">
+            <element name="message" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="code" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="version" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="list_genres.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="response" typeRef="list_genres.response" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="list_genres.response" name="response" supportsQuickData="false">
+            <element name="total" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="genres" typeRef="list_genres.genresEntryItem" isList="true" allowNull="false"/>
+            <element name="start" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="status" typeRef="list_genres.status" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="artist_id_name" CRUDService="false" type="RestService" springFile="artist_id_name.spring.xml">
+    <operation name="invoke">
+        <parameter name="api_key" typeRef="java.lang.String" isList="false"/>
+        <parameter name="name" typeRef="java.lang.String" isList="false"/>
+        <parameter name="format" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="artist_id_name.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="artist_id_name.response" name="response" supportsQuickData="false">
+            <element name="artists" typeRef="artist_id_name.artistsEntryItem" isList="true" allowNull="false"/>
+            <element name="status" typeRef="artist_id_name.status" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_id_name.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="response" typeRef="artist_id_name.response" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_id_name.artistsEntryItem" name="artistsEntryItem" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_id_name.status" name="status" supportsQuickData="false">
+            <element name="message" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="code" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="version" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>
