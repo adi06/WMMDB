@@ -1,16 +1,16 @@
 <wm-page name="page1" layouttype="blank" columns="1" data-ng-controller="MainPageController">
     <wm-content name="content1">
         <wm-page-content name="page_content1" columnwidth="12">
-            <wm-container show="true" height="50" name="container1"></wm-container>
-            <wm-livelist dataset="bind:Variables.Echonest_list_genresInvoke.dataSet" listclass="list-group" itemclass="list-group-item" name="geners_livelist" scopedataset="list_geners" shownavigation="false" showrecordcount="true">
+            <wm-container content="header" show="true" height="100" name="container1"></wm-container>
+            <wm-livelist dataset="bind:Variables.Echonest_list_genresInvoke.dataSet.response" listclass="list-group" itemclass="list-group-item" name="geners_livelist" scopedataset="list_geners" shownavigation="false" showrecordcount="true">
                 <wm-listtemplate layout="thumbnail" name="listtemplate4">
-                    <wm-container name="container11" class="thumbnail">
-                        <wm-picture pictureaspect="Both" picturesource="resources/images/imagelists/Music-genres.png" name="picture6" class="picture" shape="thumbnail" height="300"></wm-picture>
-                        <wm-container name="container12" class="caption" data-template-ctr="true">
-                            <wm-composite name="composite2">
-                                <wm-label name="label5" class="col-md-3"></wm-label>
-                                <wm-container name="container13" class="col-md-9">
-                                    <wm-select dataset="bind:Variables.Echonest_list_genresInvoke.dataSet" name="select2"></wm-select>
+                    <wm-container name="container6" class="thumbnail">
+                        <wm-picture pictureaspect="Both" picturesource="resources/images/imagelists/Music-genres.png" name="picture3" class="picture" shape="thumbnail" height="400"></wm-picture>
+                        <wm-container name="container7_1" class="caption" data-template-ctr="true">
+                            <wm-composite name="composite1">
+                                <wm-label caption="Select Genre" height="36" name="genreLabel" class="col-md-3"></wm-label>
+                                <wm-container name="container8_1" class="col-md-9">
+                                    <wm-select displayexpression="bind:$[response.genres[0].name]" dataset="bind:Variables.Echonest_list_genresInvoke.dataSet.response.genres" name="select1"></wm-select>
                                 </wm-container>
                             </wm-composite>
                         </wm-container>

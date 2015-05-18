@@ -14,48 +14,6 @@
 		"category": "wm.Variable",
 		"_id": "wm-wm.Variable1431887326499"
 	},
-	"list_genres": {
-		"name": "list_genres",
-		"type": "echonest_list_genres.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"format": "json"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "echonest_list_genres",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"wmServiceOperationInfo": {
-			"relativePath": "/echonest_list_genres/invoke",
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
-			]
-		},
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-wm.ServiceVariable1431875960608"
-	},
 	"MetabroadcastInvoke": {
 		"name": "MetabroadcastInvoke",
 		"type": "metabroadcast.RootResponse",
@@ -147,9 +105,9 @@
 		"category": "wm.Variable",
 		"_id": "wm-wm.Variable1402640443182"
 	},
-	"Echonest_artistInvoke": {
-		"name": "Echonest_artistInvoke",
-		"type": "echonest_artist.RootResponse",
+	"Echonest_list_genresInvoke": {
+		"name": "Echonest_list_genresInvoke",
+		"type": "echonest_list_genres.RootResponse",
 		"isList": false,
 		"owner": "App",
 		"dataSet": {
@@ -157,17 +115,52 @@
 		},
 		"dataBinding": {
 			"api_key": "9DHD6YRBIEQATUGO2",
-			"name": "bind:Widgets.select2.datavalue",
-			"bucket": [
-				"hotttnesss",
-				"biographies",
-				"images",
-				"songs",
-				"urls",
-				"video",
-				"reviews"
-			],
 			"format": "json"
+		},
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "echonest_list_genres",
+		"operation": "invoke",
+		"operationType": null,
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": true,
+		"columnField": "response.genres[0].name",
+		"serviceType": "RestService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "GET",
+			"name": "invoke",
+			"parameters": [
+				{
+					"name": "api_key",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "format",
+					"parameterType": "QUERY"
+				}
+			],
+			"relativePath": "/echonest_list_genres/invoke"
+		},
+		"_id": "wm-wm.ServiceVariable1431928110249",
+		"transformationColumns": []
+	},
+	"artist_serviceVariable": {
+		"type": "echonest_artist.RootResponse",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": {
+			"dataValue": "",
+			"api_key": "9DHD6YRBIEQATUGO2",
+			"name": "bind:Widgets.select1.datavalue"
 		},
 		"saveInPhonegap": false,
 		"firstRow": 0,
@@ -179,9 +172,14 @@
 		"startUpdate": false,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
+		"transformationRequired": true,
+		"columnField": "--none--",
+		"dataField": "--none--",
+		"serviceType": "RestService",
+		"category": "wm.ServiceVariable",
+		"_id": "wm-wm.ServiceVariable1431930675942",
+		"name": "artist_serviceVariable",
 		"wmServiceOperationInfo": {
-			"relativePath": "/echonest_artist/invoke",
 			"httpMethod": "GET",
 			"name": "invoke",
 			"parameters": [
@@ -201,57 +199,8 @@
 					"name": "format",
 					"parameterType": "QUERY"
 				}
-			]
-		},
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-wm.ServiceVariable1431887097293",
-		"isDefault": true
-	},
-	"Echonest_list_genresInvoke": {
-		"name": "Echonest_list_genresInvoke",
-		"type": "echonest_list_genresRootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"format": "json"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "echonest_list_genres",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"columnField": "value",
-		"dataField": "value",
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
 			],
-			"relativePath": "/echonest_list_genres/invoke"
-		},
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-wm.ServiceVariable1431875779276",
-		"isDefault": true,
-		"transformationColumns": []
+			"relativePath": "/echonest_artist/invoke"
+		}
 	}
 }

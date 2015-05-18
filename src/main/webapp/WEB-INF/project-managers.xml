@@ -5,44 +5,57 @@
             <map merge="true">
                 <entry key="echonest_artist">
                     <list>
-                        <value>echonest_artist.response</value>
-                        <value>echonest_artist.RootResponse</value>
-                        <value>echonest_artist.songsEntryItem</value>
-                        <value>echonest_artist.status</value>
-                        <value>echonest_artist.imagesEntryItem</value>
-                        <value>echonest_artist.urls</value>
-                        <value>echonest_artist.biographiesEntryItem</value>
-                        <value>echonest_artist.artistsEntryItem</value>
-                        <value>echonest_artist.license</value>
                         <value>echonest_artist.videoEntryItem</value>
                         <value>echonest_artist.reviewsEntryItem</value>
+                        <value>echonest_artist.artistsEntryItem</value>
+                        <value>echonest_artist.license</value>
+                        <value>echonest_artist.songsEntryItem</value>
+                        <value>echonest_artist.imagesEntryItem</value>
+                        <value>echonest_artist.status</value>
+                        <value>echonest_artist.RootResponse</value>
+                        <value>echonest_artist.response</value>
+                        <value>echonest_artist.urls</value>
+                    </list>
+                </entry>
+                <entry key="echonest_artist_data">
+                    <list>
+                        <value>echonest_artist_data.RootResponse</value>
+                        <value>echonest_artist_data.response</value>
+                        <value>echonest_artist_data.songsEntryItem</value>
+                        <value>echonest_artist_data.imagesEntryItem</value>
+                        <value>echonest_artist_data.artistsEntryItem</value>
+                        <value>echonest_artist_data.license</value>
+                        <value>echonest_artist_data.status</value>
+                        <value>echonest_artist_data.urls</value>
+                        <value>echonest_artist_data.reviewsEntryItem</value>
+                        <value>echonest_artist_data.videoEntryItem</value>
                     </list>
                 </entry>
                 <entry key="echonest_list_genres">
                     <list>
-                        <value>echonest_list_genres.response</value>
-                        <value>echonest_list_genres.RootResponse</value>
                         <value>echonest_list_genres.genresEntryItem</value>
+                        <value>echonest_list_genres.RootResponse</value>
+                        <value>echonest_list_genres.response</value>
                         <value>echonest_list_genres.status</value>
                     </list>
                 </entry>
                 <entry key="metabroadcast">
                     <list>
-                        <value>metabroadcast.series_number</value>
+                        <value>metabroadcast.broadcastsEntryItem</value>
+                        <value>metabroadcast.parameters</value>
+                        <value>metabroadcast.container</value>
                         <value>metabroadcast.RootResponse</value>
-                        <value>metabroadcast.series</value>
-                        <value>metabroadcast.episode</value>
                         <value>metabroadcast.terms_and_conditions</value>
-                        <value>metabroadcast.display_title</value>
+                        <value>metabroadcast.series_number</value>
+                        <value>metabroadcast.thumbnail</value>
+                        <value>metabroadcast.request</value>
                         <value>metabroadcast.repeat</value>
                         <value>metabroadcast.aliasesEntryItem</value>
-                        <value>metabroadcast.thumbnail</value>
-                        <value>metabroadcast.source</value>
-                        <value>metabroadcast.container</value>
-                        <value>metabroadcast.request</value>
-                        <value>metabroadcast.parameters</value>
+                        <value>metabroadcast.episode</value>
                         <value>metabroadcast.blackout_restriction</value>
-                        <value>metabroadcast.broadcastsEntryItem</value>
+                        <value>metabroadcast.source</value>
+                        <value>metabroadcast.display_title</value>
+                        <value>metabroadcast.series</value>
                         <value>metabroadcast.schedule_date</value>
                     </list>
                 </entry>
