@@ -2,30 +2,28 @@
     <wm-content name="content1">
         <wm-page-content name="page_content1" columnwidth="12">
             <wm-container show="true" height="50" name="container1"></wm-container>
-            <wm-container name="container10" height="100">
-                <wm-label name="label1" caption="Genres"></wm-label>
-                <wm-livelist listclass="list-group" itemclass="list-group-item" name="geners_livelist" scopedataset="list_geners" dataset="bind:Variables.Echonest_list_genresInvoke.dataSet" shownavigation="false" showrecordcount="true">
-                    <wm-listtemplate layout="thumbnail" name="listtemplate4">
-                        <wm-container class="thumbnail" name="container7">
-                            <wm-picture class="picture" shape="thumbnail" height="100" name="picture4"></wm-picture>
-                            <wm-container class="caption" data-template-ctr="true" name="container8">
-                                <wm-composite name="composite2">
-                                    <wm-label class="col-md-3" name="label4" caption="Select Genres" animation="flash"></wm-label>
-                                    <wm-container class="col-md-9" name="container10_1">
-                                        <wm-select name="select2" dataset="bind:Variables.Echonest_list_genresInvoke.dataSet.response.genres" datafield="All Fields" displayfield="name" required="false" multiple="false" datavalue="Select One Genre" scopedataset="genre_name"
-                                        on-mouseenter="Echonest_artistInvoke"></wm-select>
-                                    </wm-container>
-                                </wm-composite>
-                            </wm-container>
+            <wm-livelist dataset="bind:Variables.Echonest_list_genresInvoke.dataSet" listclass="list-group" itemclass="list-group-item" name="geners_livelist" scopedataset="list_geners" shownavigation="false" showrecordcount="true">
+                <wm-listtemplate layout="thumbnail" name="listtemplate4">
+                    <wm-container name="container11" class="thumbnail">
+                        <wm-picture pictureaspect="Both" picturesource="resources/images/imagelists/Music-genres.png" name="picture6" class="picture" shape="thumbnail" height="300"></wm-picture>
+                        <wm-container name="container12" class="caption" data-template-ctr="true">
+                            <wm-composite name="composite2">
+                                <wm-label name="label5" class="col-md-3"></wm-label>
+                                <wm-container name="container13" class="col-md-9">
+                                    <wm-select dataset="bind:Variables.Echonest_list_genresInvoke.dataSet" name="select2"></wm-select>
+                                </wm-container>
+                            </wm-composite>
                         </wm-container>
-                    </wm-listtemplate>
-                </wm-livelist>
-            </wm-container>
-            <wm-livelist listclass="list-group" itemclass="list-group-item" name="artist_livelist" dataset="bind:Variables.Echonest_artistInvoke.dataSet.response.artists">
-                <wm-listtemplate layout="thumbnail" name="listtemplate2">
-                    <wm-container class="thumbnail" name="container8_1">
-                        <wm-picture class="picture" shape="thumbnail" height="100" name="picture3" picturesource="bind:Variables.Echonest_artistInvoke.dataSet.response.artists[0].images[0].url"></wm-picture>
-                        <wm-container class="caption" data-template-ctr="true" name="container9"></wm-container>
+                    </wm-container>
+                </wm-listtemplate>
+            </wm-livelist>
+            <wm-livelist dataset="bind:Variables.Echonest_artistInvoke.dataSet" name="artist_livelist2" listclass="list-group" itemclass="list-group-item">
+                <wm-listtemplate name="listtemplate2" layout="thumbnail">
+                    <wm-container name="container7" class="thumbnail">
+                        <wm-picture name="picture4" class="picture" shape="thumbnail" height="100"></wm-picture>
+                        <wm-container name="container8" class="caption" data-template-ctr="true">
+                            <wm-label name="label2" width="100%" caption="bind:Variables.Echonest_artistInvoke.dataSet.dataValue"></wm-label>
+                        </wm-container>
                     </wm-container>
                 </wm-listtemplate>
             </wm-livelist>
