@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="metabroadcast" CRUDService="false" type="RestService" springFile="metabroadcast.spring.xml">
+    <operation name="invoke">
+        <parameter name="source" typeRef="java.lang.String" isList="false"/>
+        <parameter name="annotations" typeRef="java.lang.String" isList="false"/>
+        <parameter name="type" typeRef="java.lang.String" isList="false"/>
+        <parameter name="key" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="metabroadcast.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="metabroadcast.series_number" name="series_number" supportsQuickData="false"/>
+        <dataobject javaType="metabroadcast.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="episode" typeRef="metabroadcast.episode" isList="false" allowNull="false"/>
+            <element name="request" typeRef="metabroadcast.request" isList="false" allowNull="false"/>
+            <element name="terms_and_conditions" typeRef="metabroadcast.terms_and_conditions" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="metabroadcast.series" name="series" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="metabroadcast.episode" name="episode" supportsQuickData="false">
+            <element name="series_number" typeRef="metabroadcast.series_number" isList="false" allowNull="false"/>
+            <element name="series" typeRef="metabroadcast.series" isList="false" allowNull="false"/>
+            <element name="media_type" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="display_title" typeRef="metabroadcast.display_title" isList="false" allowNull="false"/>
+            <element name="image" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="episode_number" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="type" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="thumbnail" typeRef="metabroadcast.thumbnail" isList="false" allowNull="false"/>
+            <element name="source" typeRef="metabroadcast.source" isList="false" allowNull="false"/>
+            <element name="container" typeRef="metabroadcast.container" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="specialization" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="broadcasts" typeRef="metabroadcast.broadcastsEntryItem" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="metabroadcast.terms_and_conditions" name="terms_and_conditions" supportsQuickData="false">
+            <element name="text" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="metabroadcast.display_title" name="display_title" supportsQuickData="false">
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="subtitle" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="metabroadcast.repeat" name="repeat" supportsQuickData="false"/>
+        <dataobject javaType="metabroadcast.aliasesEntryItem" name="aliasesEntryItem" supportsQuickData="false">
+            <element name="value" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="namespace" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="metabroadcast.thumbnail" name="thumbnail" supportsQuickData="false"/>
+        <dataobject javaType="metabroadcast.source" name="source" supportsQuickData="false">
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="key" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="country" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="metabroadcast.container" name="container" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="type" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="metabroadcast.request" name="request" supportsQuickData="false">
+            <element name="path" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="parameters" typeRef="metabroadcast.parameters" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="metabroadcast.parameters" name="parameters" supportsQuickData="false">
+            <element name="source" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="annotations" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="type" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="key" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="metabroadcast.blackout_restriction" name="blackout_restriction" supportsQuickData="false"/>
+        <dataobject javaType="metabroadcast.broadcastsEntryItem" name="broadcastsEntryItem" supportsQuickData="false">
+            <element name="broadcast_duration" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="signed" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="transmission_time" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="broadcast_on" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="repeat" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="surround" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="aliases" typeRef="metabroadcast.aliasesEntryItem" isList="true" allowNull="false"/>
+            <element name="high_definition" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="audio_described" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="transmission_end_time" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="subtitled" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="premiere" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="blackout_restriction" typeRef="metabroadcast.blackout_restriction" isList="false" allowNull="false"/>
+            <element name="widescreen" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="new_series" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="live" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="schedule_date" typeRef="metabroadcast.schedule_date" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="metabroadcast.schedule_date" name="schedule_date" supportsQuickData="false"/>
+    </dataobjects>
+</service>

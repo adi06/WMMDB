@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="echonest_artist" CRUDService="false" type="RestService" springFile="echonest_artist.spring.xml">
+    <operation name="invoke">
+        <parameter name="api_key" typeRef="java.lang.String" isList="false"/>
+        <parameter name="name" typeRef="java.lang.String" isList="false"/>
+        <parameter name="bucket" typeRef="java.lang.String" isList="true"/>
+        <parameter name="format" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="echonest_artist.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="echonest_artist.response" name="response" supportsQuickData="false">
+            <element name="artists" typeRef="echonest_artist.artistsEntryItem" isList="true" allowNull="false"/>
+            <element name="status" typeRef="echonest_artist.status" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="echonest_artist.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="response" typeRef="echonest_artist.response" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="echonest_artist.songsEntryItem" name="songsEntryItem" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="echonest_artist.status" name="status" supportsQuickData="false">
+            <element name="message" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="code" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="version" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="echonest_artist.imagesEntryItem" name="imagesEntryItem" supportsQuickData="false">
+            <element name="tags" isList="true" allowNull="false"/>
+            <element name="height" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="verified" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="width" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="license" typeRef="echonest_artist.license" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="aspect_ratio" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="echonest_artist.urls" name="urls" supportsQuickData="false">
+            <element name="official_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="wikipedia_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="mb_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="lastfm_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="myspace_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="twitter_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="echonest_artist.biographiesEntryItem" name="biographiesEntryItem" supportsQuickData="false">
+            <element name="site" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="text" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="truncated" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="license" typeRef="echonest_artist.license" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="echonest_artist.artistsEntryItem" name="artistsEntryItem" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="reviews" typeRef="echonest_artist.reviewsEntryItem" isList="true" allowNull="false"/>
+            <element name="urls" typeRef="echonest_artist.urls" isList="false" allowNull="false"/>
+            <element name="songs" typeRef="echonest_artist.songsEntryItem" isList="true" allowNull="false"/>
+            <element name="hotttnesss" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="images" typeRef="echonest_artist.imagesEntryItem" isList="true" allowNull="false"/>
+            <element name="biographies" typeRef="echonest_artist.biographiesEntryItem" isList="true" allowNull="false"/>
+            <element name="video" typeRef="echonest_artist.videoEntryItem" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="echonest_artist.license" name="license" supportsQuickData="false">
+            <element name="type" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="attribution" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="attribution-url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="version" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="echonest_artist.videoEntryItem" name="videoEntryItem" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="site" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="image_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="date_found" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="echonest_artist.reviewsEntryItem" name="reviewsEntryItem" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="summary" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="date_reviewed" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="image_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="date_found" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="release" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

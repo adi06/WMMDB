@@ -1,0 +1,230 @@
+{
+  "genre_staticVariable1" : {
+    "category" : "wm.Variable",
+    "isList" : false,
+    "_id" : "wm-wm.Variable1431887326499",
+    "saveInPhonegap" : false,
+    "dataBinding" : {
+      "dataValue" : "bind:Variables.Echonest_list_genresInvoke.dataSet.response.genres[0].name"
+    },
+    "name" : "genre_staticVariable1",
+    "owner" : "App",
+    "type" : "string",
+    "dataSet" : {
+      "dataValue" : ""
+    }
+  },
+  "list_genres" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/echonest_list_genres/invoke",
+      "httpMethod" : "GET",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "api_key",
+        "parameterType" : "QUERY"
+      }, {
+        "name" : "format",
+        "parameterType" : "QUERY"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : true,
+    "type" : "echonest_list_genres.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-wm.ServiceVariable1431875960608",
+    "dataBinding" : {
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "format" : "json"
+    },
+    "saveInPhonegap" : false,
+    "operationType" : null,
+    "name" : "list_genres",
+    "designMaxResults" : 10,
+    "owner" : "App",
+    "service" : "echonest_list_genres"
+  },
+  "MetabroadcastInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/metabroadcast/invoke",
+      "httpMethod" : "GET",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "source",
+        "parameterType" : "QUERY"
+      }, {
+        "name" : "annotations",
+        "parameterType" : "QUERY"
+      }, {
+        "name" : "type",
+        "parameterType" : "QUERY"
+      }, {
+        "name" : "key",
+        "parameterType" : "QUERY"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "metabroadcast.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : false,
+    "_id" : "wm-wm.ServiceVariable1431600352006",
+    "dataBinding" : {
+      "source" : "pressassociation.com",
+      "annotations" : "brand_summary,broadcasts,channel,channels,channel_summary,description",
+      "type" : "item",
+      "key" : "c1e92985ec124202b7f07140bcde6e3f"
+    },
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "name" : "MetabroadcastInvoke",
+    "designMaxResults" : 10,
+    "owner" : "App",
+    "service" : "metabroadcast"
+  },
+  "imageVariable" : {
+    "category" : "wm.Variable",
+    "isList" : false,
+    "_id" : "wm-wm.Variable1431666424925",
+    "saveInPhonegap" : false,
+    "dataBinding" : {
+      "dataValue" : "http://www.hdwallpapers.in/walls/2011_kung_fu_panda-wide.jpg"
+    },
+    "name" : "imageVariable",
+    "owner" : "App",
+    "type" : "string",
+    "dataSet" : {
+      "dataValue" : ""
+    }
+  },
+  "goToPage-Main" : {
+    "operation" : "gotoPage",
+    "category" : "wm.NavigationVariable",
+    "pageName" : "Main",
+    "_id" : "wm-wm.NavigationVariable1389180517517",
+    "dataBinding" : { },
+    "name" : "goToPage-Main",
+    "owner" : "App"
+  },
+  "supportedLocale" : {
+    "category" : "wm.Variable",
+    "isList" : false,
+    "_id" : "wm-wm.Variable1402640443182",
+    "saveInPhonegap" : false,
+    "dataBinding" : {
+      "dataValue" : ""
+    },
+    "name" : "supportedLocale",
+    "owner" : "App",
+    "type" : "string",
+    "dataSet" : {
+      "en" : "English"
+    }
+  },
+  "Echonest_artistInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/echonest_artist/invoke",
+      "httpMethod" : "GET",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "api_key",
+        "parameterType" : "QUERY"
+      }, {
+        "name" : "name",
+        "parameterType" : "QUERY"
+      }, {
+        "name" : "bucket",
+        "parameterType" : "QUERY"
+      }, {
+        "name" : "format",
+        "parameterType" : "QUERY"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "echonest_artist.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-wm.ServiceVariable1431887097293",
+    "dataBinding" : {
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "name" : "bind:Widgets.select2.datavalue",
+      "bucket" : [ "hotttnesss", "biographies", "images", "songs", "urls", "video", "reviews" ],
+      "format" : "json"
+    },
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : null,
+    "name" : "Echonest_artistInvoke",
+    "designMaxResults" : 10,
+    "owner" : "App",
+    "service" : "echonest_artist"
+  },
+  "Echonest_list_genresInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/echonest_list_genres/invoke",
+      "httpMethod" : "GET",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "api_key",
+        "parameterType" : "QUERY"
+      }, {
+        "name" : "format",
+        "parameterType" : "QUERY"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : true,
+    "type" : "echonest_list_genres.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-wm.ServiceVariable1431875779276",
+    "dataBinding" : {
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "format" : "json"
+    },
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : null,
+    "name" : "Echonest_list_genresInvoke",
+    "designMaxResults" : 10,
+    "owner" : "App",
+    "service" : "echonest_list_genres"
+  }
+}

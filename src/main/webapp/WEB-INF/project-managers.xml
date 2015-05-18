@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd" xmlns="http://www.springframework.org/schema/beans" xmlns:security="http://www.springframework.org/schema/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <bean class="com.wavemaker.runtime.service.TypeManager" parent="typeManagerBase" scope="singleton" id="typeManager">
+        <property name="types">
+            <map merge="true">
+                <entry key="echonest_artist">
+                    <list>
+                        <value>echonest_artist.response</value>
+                        <value>echonest_artist.RootResponse</value>
+                        <value>echonest_artist.songsEntryItem</value>
+                        <value>echonest_artist.status</value>
+                        <value>echonest_artist.imagesEntryItem</value>
+                        <value>echonest_artist.urls</value>
+                        <value>echonest_artist.biographiesEntryItem</value>
+                        <value>echonest_artist.artistsEntryItem</value>
+                        <value>echonest_artist.license</value>
+                        <value>echonest_artist.videoEntryItem</value>
+                        <value>echonest_artist.reviewsEntryItem</value>
+                    </list>
+                </entry>
+                <entry key="echonest_list_genres">
+                    <list>
+                        <value>echonest_list_genres.response</value>
+                        <value>echonest_list_genres.RootResponse</value>
+                        <value>echonest_list_genres.genresEntryItem</value>
+                        <value>echonest_list_genres.status</value>
+                    </list>
+                </entry>
+                <entry key="metabroadcast">
+                    <list>
+                        <value>metabroadcast.series_number</value>
+                        <value>metabroadcast.RootResponse</value>
+                        <value>metabroadcast.series</value>
+                        <value>metabroadcast.episode</value>
+                        <value>metabroadcast.terms_and_conditions</value>
+                        <value>metabroadcast.display_title</value>
+                        <value>metabroadcast.repeat</value>
+                        <value>metabroadcast.aliasesEntryItem</value>
+                        <value>metabroadcast.thumbnail</value>
+                        <value>metabroadcast.source</value>
+                        <value>metabroadcast.container</value>
+                        <value>metabroadcast.request</value>
+                        <value>metabroadcast.parameters</value>
+                        <value>metabroadcast.blackout_restriction</value>
+                        <value>metabroadcast.broadcastsEntryItem</value>
+                        <value>metabroadcast.schedule_date</value>
+                    </list>
+                </entry>
+            </map>
+        </property>
+    </bean>
+</beans>
