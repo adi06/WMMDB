@@ -3,6 +3,24 @@
     <bean class="com.wavemaker.runtime.service.TypeManager" parent="typeManagerBase" scope="singleton" id="typeManager">
         <property name="types">
             <map merge="true">
+                <entry key="artist_data">
+                    <list>
+                        <value>artist_data.region</value>
+                        <value>artist_data.newsEntryItem</value>
+                        <value>artist_data.status</value>
+                        <value>artist_data.artist_location</value>
+                        <value>artist_data.artist</value>
+                        <value>artist_data.RootResponse</value>
+                        <value>artist_data.license</value>
+                        <value>artist_data.response</value>
+                        <value>artist_data.reviewsEntryItem</value>
+                        <value>artist_data.urls</value>
+                        <value>artist_data.songsEntryItem</value>
+                        <value>artist_data.videoEntryItem</value>
+                        <value>artist_data.biographiesEntryItem</value>
+                        <value>artist_data.blogsEntryItem</value>
+                    </list>
+                </entry>
                 <entry key="artist_id_name">
                     <list>
                         <value>artist_id_name.response</value>
@@ -98,12 +116,14 @@
                         <value>echonest_genre_profile.urls</value>
                     </list>
                 </entry>
-                <entry key="echonest_list_5">
+                <entry key="echonest_images_name">
                     <list>
-                        <value>echonest_list_5.RootResponse</value>
-                        <value>echonest_list_5.status</value>
-                        <value>echonest_list_5.genresEntryItem</value>
-                        <value>echonest_list_5.response</value>
+                        <value>echonest_images_name.license</value>
+                        <value>echonest_images_name.imagesEntryItem</value>
+                        <value>echonest_images_name.artistsEntryItem</value>
+                        <value>echonest_images_name.status</value>
+                        <value>echonest_images_name.response</value>
+                        <value>echonest_images_name.RootResponse</value>
                     </list>
                 </entry>
                 <entry key="echonest_list_genres">
@@ -120,6 +140,24 @@
                         <value>echonest_list_genres_50.status</value>
                         <value>echonest_list_genres_50.genresEntryItem</value>
                         <value>echonest_list_genres_50.RootResponse</value>
+                    </list>
+                </entry>
+                <entry key="genre">
+                    <list>
+                        <value>genre.RootResponse</value>
+                        <value>genre.genresEntryItem</value>
+                        <value>genre.urls</value>
+                        <value>genre.status</value>
+                        <value>genre.response</value>
+                    </list>
+                </entry>
+                <entry key="genre_prof">
+                    <list>
+                        <value>genre_prof.status</value>
+                        <value>genre_prof.genresEntryItem</value>
+                        <value>genre_prof.RootResponse</value>
+                        <value>genre_prof.response</value>
+                        <value>genre_prof.urls</value>
                     </list>
                 </entry>
                 <entry key="list_genres">

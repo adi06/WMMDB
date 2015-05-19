@@ -3,17 +3,17 @@
 		"operationType": null,
 		"name": "invoke",
 		"parameters": [{
-			"name": "results",
-			"type": "java.lang.String"
-		}, {
 			"name": "api_key",
 			"type": "java.lang.String"
 		}, {
-			"name": "format",
+			"name": "bucket",
+			"type": "[java.lang.String]"
+		}, {
+			"name": "name",
 			"type": "java.lang.String"
 		}],
-		"returnType": "echonest_list_5.RootResponse"
+		"returnType": "genre_prof.RootResponse"
 	}],
-	"serviceURL": "echonest_list_5.json",
+	"serviceURL": "genre_prof.json",
 	"serviceType": "JSON-RPC"
 }

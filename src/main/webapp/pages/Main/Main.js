@@ -22,4 +22,10 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
 
     };
 
+
+    $scope.picture4_1Click = function($event, $isolateScope) {
+        window.location.href = "#/Profile/" + $scope.Widgets.livelist2.selecteditem.id
+    };
+
+
 }]);

@@ -198,7 +198,7 @@
 		"dataBinding": {
 			"api_key": "9DHD6YRBIEQATUGO2",
 			"format": "json",
-			"name": "jazz"
+			"name": "bind:Widgets.select3.datavalue"
 		},
 		"saveInPhonegap": false,
 		"firstRow": 0,
@@ -206,8 +206,9 @@
 		"designMaxResults": 10,
 		"service": "artist_id_name",
 		"operation": "invoke",
+		"operationType": null,
 		"startUpdate": false,
-		"autoUpdate": false,
+		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
 		"serviceType": "RestService",
@@ -453,7 +454,7 @@
 		"operation": "invoke",
 		"operationType": null,
 		"startUpdate": true,
-		"autoUpdate": true,
+		"autoUpdate": false,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
 		"serviceType": "RestService",
@@ -525,21 +526,25 @@
 		"category": "wm.ServiceVariable",
 		"_id": "wm-wm.ServiceVariable1432028099678"
 	},
-	"Prof_serviceVariable": {
-		"type": "echonest_genre_prof.RootResponse",
+	"Echonest_images_nameInvoke": {
+		"name": "Echonest_images_nameInvoke",
+		"type": "echonest_images_name.RootResponse",
 		"isList": false,
 		"owner": "App",
 		"dataSet": {
 			"dataValue": ""
 		},
 		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2"
+			"api_key": "9DHD6YRBIEQATUGO2",
+			"format": "json",
+			"name": "bind:Widgets.select3.datavalue",
+			"bucket": "images"
 		},
 		"saveInPhonegap": false,
 		"firstRow": 0,
 		"maxResults": 20,
 		"designMaxResults": 10,
-		"service": "echonest_genre_prof",
+		"service": "echonest_images_name",
 		"operation": "invoke",
 		"operationType": null,
 		"startUpdate": false,
@@ -547,6 +552,8 @@
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
 		"serviceType": "RestService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
 		"wmServiceOperationInfo": {
 			"httpMethod": "GET",
 			"name": "invoke",
@@ -562,11 +569,37 @@
 				{
 					"name": "name",
 					"parameterType": "QUERY"
+				},
+				{
+					"name": "format",
+					"parameterType": "QUERY"
 				}
 			],
-			"relativePath": "/echonest_genre_prof/invoke"
+			"relativePath": "/echonest_images_name/invoke"
 		},
-		"category": "wm.ServiceVariable",
-		"_id": "wm-wm.ServiceVariable1432028960012"
+		"_id": "wm-wm.ServiceVariable1432029974727"
+	},
+	"goToPage-Profile": {
+		"name": "goToPage-Profile",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "Profile",
+		"dataBinding": {},
+		"category": "wm.NavigationVariable",
+		"_id": "wm-wm.NavigationVariable1432030624934"
+	},
+	"Artist_Id": {
+		"type": "string",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": {
+			"dataValue": "bind:Variables.Echonest_images_nameInvoke.dataSet.response.artists[0].id"
+		},
+		"saveInPhonegap": false,
+		"category": "wm.Variable",
+		"_id": "wm-wm.Variable1432034545668"
 	}
 }

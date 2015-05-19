@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="artist_data" CRUDService="false" type="RestService" springFile="artist_data.spring.xml">
+    <operation name="invoke">
+        <parameter name="id" typeRef="java.lang.String" isList="false"/>
+        <parameter name="api_key" typeRef="java.lang.String" isList="false"/>
+        <parameter name="bucket" typeRef="java.lang.String" isList="true"/>
+        <parameter name="format" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="artist_data.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="artist_data.region" name="region" supportsQuickData="false"/>
+        <dataobject javaType="artist_data.newsEntryItem" name="newsEntryItem" supportsQuickData="false">
+            <element name="summary" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="date_found" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_data.status" name="status" supportsQuickData="false">
+            <element name="message" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="code" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="version" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_data.artist_location" name="artist_location" supportsQuickData="false">
+            <element name="region" typeRef="artist_data.region" isList="false" allowNull="false"/>
+            <element name="location" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="country" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="city" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_data.artist" name="artist" supportsQuickData="false">
+            <element name="artist_location" typeRef="artist_data.artist_location" isList="false" allowNull="false"/>
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="reviews" typeRef="artist_data.reviewsEntryItem" isList="true" allowNull="false"/>
+            <element name="news" typeRef="artist_data.newsEntryItem" isList="true" allowNull="false"/>
+            <element name="urls" typeRef="artist_data.urls" isList="false" allowNull="false"/>
+            <element name="songs" typeRef="artist_data.songsEntryItem" isList="true" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="biographies" typeRef="artist_data.biographiesEntryItem" isList="true" allowNull="false"/>
+            <element name="video" typeRef="artist_data.videoEntryItem" isList="true" allowNull="false"/>
+            <element name="blogs" typeRef="artist_data.blogsEntryItem" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_data.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="response" typeRef="artist_data.response" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_data.license" name="license" supportsQuickData="false">
+            <element name="attribution-url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="type" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="attribution" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="version" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_data.response" name="response" supportsQuickData="false">
+            <element name="status" typeRef="artist_data.status" isList="false" allowNull="false"/>
+            <element name="artist" typeRef="artist_data.artist" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_data.reviewsEntryItem" name="reviewsEntryItem" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="summary" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="date_reviewed" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="image_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="date_found" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="release" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_data.urls" name="urls" supportsQuickData="false">
+            <element name="official_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="mb_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="wikipedia_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="lastfm_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="myspace_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="twitter_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_data.songsEntryItem" name="songsEntryItem" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_data.videoEntryItem" name="videoEntryItem" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="site" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="image_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="date_found" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_data.biographiesEntryItem" name="biographiesEntryItem" supportsQuickData="false">
+            <element name="site" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="text" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="truncated" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="license" typeRef="artist_data.license" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_data.blogsEntryItem" name="blogsEntryItem" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="summary" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="date_posted" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="date_found" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>
