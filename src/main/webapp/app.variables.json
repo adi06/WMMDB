@@ -1,19 +1,4 @@
 {
-	"genre_staticVariable1": {
-		"name": "genre_staticVariable1",
-		"type": "string",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"dataValue": "bind:Variables.Echonest_list_genresInvoke.dataSet.response.genres[0].name"
-		},
-		"saveInPhonegap": false,
-		"category": "wm.Variable",
-		"_id": "wm-wm.Variable1431887326499"
-	},
 	"MetabroadcastInvoke": {
 		"name": "MetabroadcastInvoke",
 		"type": "metabroadcastRootResponse",
@@ -159,56 +144,6 @@
 			"relativePath": "/echonest_artist/invoke"
 		}
 	},
-	"jazz_serviceVariable": {
-		"name": "jazz_serviceVariable",
-		"type": "echonest_jazz.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"name": "jazz"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "echonest_jazz",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "name",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "bucket",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/echonest_jazz/invoke"
-		},
-		"category": "wm.ServiceVariable",
-		"_id": "wm-wm.ServiceVariable1431936859418"
-	},
 	"EchonestInvoke": {
 		"name": "EchonestInvoke",
 		"type": "echonest.RootResponse",
@@ -251,48 +186,6 @@
 			"relativePath": "/echonest/invoke"
 		},
 		"_id": "wm-wm.ServiceVariable1431945284192"
-	},
-	"List_genresInvoke": {
-		"name": "List_genresInvoke",
-		"type": "list_genres.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"format": "json"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "list_genres",
-		"operation": "invoke",
-		"startUpdate": false,
-		"autoUpdate": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/list_genres/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1431956391610"
 	},
 	"Artist_id_nameInvoke": {
 		"name": "Artist_id_nameInvoke",
@@ -540,6 +433,7 @@
 		"_id": "wm-wm.ServiceVariable1431956717206"
 	},
 	"Echonest_list_genres_50Invoke": {
+		"name": "Echonest_list_genres_50Invoke",
 		"type": "echonest_list_genres_50.RootResponse",
 		"isList": false,
 		"owner": "App",
@@ -558,7 +452,7 @@
 		"service": "echonest_list_genres_50",
 		"operation": "invoke",
 		"operationType": null,
-		"startUpdate": false,
+		"startUpdate": true,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
@@ -584,7 +478,95 @@
 			],
 			"relativePath": "/echonest_list_genres_50/invoke"
 		},
-		"_id": "wm-wm.ServiceVariable1432014905334",
-		"name": "Echonest_list_genres_50Invoke"
+		"_id": "wm-wm.ServiceVariable1432014905334"
+	},
+	"serviceVariable": {
+		"name": "serviceVariable",
+		"type": "echonest_genre_profile.RootResponse",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": {
+			"api_key": "9DHD6YRBIEQATUGO2"
+		},
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "echonest_genre_profile",
+		"operation": "invoke",
+		"operationType": null,
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "RestService",
+		"wmServiceOperationInfo": {
+			"httpMethod": "GET",
+			"name": "invoke",
+			"parameters": [
+				{
+					"name": "api_key",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "bucket",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "name",
+					"parameterType": "QUERY"
+				}
+			],
+			"relativePath": "/echonest_genre_profile/invoke"
+		},
+		"category": "wm.ServiceVariable",
+		"_id": "wm-wm.ServiceVariable1432028099678"
+	},
+	"Prof_serviceVariable": {
+		"type": "echonest_genre_prof.RootResponse",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": {
+			"api_key": "9DHD6YRBIEQATUGO2"
+		},
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "echonest_genre_prof",
+		"operation": "invoke",
+		"operationType": null,
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "RestService",
+		"wmServiceOperationInfo": {
+			"httpMethod": "GET",
+			"name": "invoke",
+			"parameters": [
+				{
+					"name": "api_key",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "bucket",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "name",
+					"parameterType": "QUERY"
+				}
+			],
+			"relativePath": "/echonest_genre_prof/invoke"
+		},
+		"category": "wm.ServiceVariable",
+		"_id": "wm-wm.ServiceVariable1432028960012"
 	}
 }

@@ -80,15 +80,30 @@
                         <value>echonest_artist_data.videoEntryItem</value>
                     </list>
                 </entry>
-                <entry key="echonest_jazz">
+                <entry key="echonest_genre_prof">
                     <list>
-                        <value>echonest_jazz.imagesEntryItem</value>
-                        <value>echonest_jazz.status</value>
-                        <value>echonest_jazz.response</value>
-                        <value>echonest_jazz.license</value>
-                        <value>echonest_jazz.RootResponse</value>
-                        <value>echonest_jazz.songsEntryItem</value>
-                        <value>echonest_jazz.artistsEntryItem</value>
+                        <value>echonest_genre_prof.status</value>
+                        <value>echonest_genre_prof.response</value>
+                        <value>echonest_genre_prof.urls</value>
+                        <value>echonest_genre_prof.RootResponse</value>
+                        <value>echonest_genre_prof.genresEntryItem</value>
+                    </list>
+                </entry>
+                <entry key="echonest_genre_profile">
+                    <list>
+                        <value>echonest_genre_profile.genresEntryItem</value>
+                        <value>echonest_genre_profile.response</value>
+                        <value>echonest_genre_profile.RootResponse</value>
+                        <value>echonest_genre_profile.status</value>
+                        <value>echonest_genre_profile.urls</value>
+                    </list>
+                </entry>
+                <entry key="echonest_list_5">
+                    <list>
+                        <value>echonest_list_5.RootResponse</value>
+                        <value>echonest_list_5.status</value>
+                        <value>echonest_list_5.genresEntryItem</value>
+                        <value>echonest_list_5.response</value>
                     </list>
                 </entry>
                 <entry key="echonest_list_genres">

@@ -7,7 +7,6 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
          * variables can be accessed through '$scope.Variables' property here
          * e.g. $scope.Variables.staticVariable1.getData()
          */
-        debugger
         //   $scope.Variables.Echonest_list_genresInvoke.update();
     };
     /* perform any action with widgets inside this block */
@@ -19,9 +18,8 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
     };
 
 
-        $scope.picture3Click = function($event, $isolateScope){ 
-			
-        };
- 
-    }
-]);
+    $scope.picture3Click = function($event, $isolateScope) {
+
+    };
+
+}]);
