@@ -106,52 +106,6 @@
 		"category": "wm.Variable",
 		"_id": "wm-wm.Variable1402640443182"
 	},
-	"Echonest_list_genresInvoke": {
-		"name": "Echonest_list_genresInvoke",
-		"type": "echonest_list_genres.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"format": "json"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "echonest_list_genres",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"columnField": "response.genres",
-		"dataField": "response.genres[0].name",
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/echonest_list_genres/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1431928110249",
-		"transformationColumns": []
-	},
 	"artist_serviceVariable": {
 		"name": "artist_serviceVariable",
 		"type": "echonest_artist.RootResponse",
@@ -299,6 +253,7 @@
 		"_id": "wm-wm.ServiceVariable1431945284192"
 	},
 	"List_genresInvoke": {
+		"name": "List_genresInvoke",
 		"type": "list_genres.RootResponse",
 		"isList": false,
 		"owner": "App",
@@ -340,6 +295,7 @@
 		"_id": "wm-wm.ServiceVariable1431956391610"
 	},
 	"Artist_id_nameInvoke": {
+		"name": "Artist_id_nameInvoke",
 		"type": "artist_id_name.RootResponse",
 		"isList": false,
 		"owner": "App",
@@ -386,6 +342,7 @@
 		"_id": "wm-wm.ServiceVariable1431956512830"
 	},
 	"Artist_imageInvoke": {
+		"name": "Artist_imageInvoke",
 		"type": "artist_image.RootResponse",
 		"isList": false,
 		"owner": "App",
@@ -437,6 +394,7 @@
 		"_id": "wm-wm.ServiceVariable1431956545429"
 	},
 	"Artist_urlInvoke": {
+		"name": "Artist_urlInvoke",
 		"type": "artist_url.RootResponse",
 		"isList": false,
 		"owner": "App",
@@ -483,6 +441,7 @@
 		"_id": "wm-wm.ServiceVariable1431956643497"
 	},
 	"Artist_videoInvoke": {
+		"name": "Artist_videoInvoke",
 		"type": "artist_video.RootResponse",
 		"isList": false,
 		"owner": "App",
@@ -534,6 +493,7 @@
 		"_id": "wm-wm.ServiceVariable1431956667125"
 	},
 	"Artist_songsInvoke": {
+		"name": "Artist_songsInvoke",
 		"type": "artist_songs.RootResponse",
 		"isList": false,
 		"owner": "App",
@@ -578,5 +538,53 @@
 			"relativePath": "/artist_songs/invoke"
 		},
 		"_id": "wm-wm.ServiceVariable1431956717206"
+	},
+	"Echonest_list_genres_50Invoke": {
+		"type": "echonest_list_genres_50.RootResponse",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": {
+			"api_key": "9DHD6YRBIEQATUGO2",
+			"format": "json",
+			"results": "50"
+		},
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "echonest_list_genres_50",
+		"operation": "invoke",
+		"operationType": null,
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "RestService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "GET",
+			"name": "invoke",
+			"parameters": [
+				{
+					"name": "results",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "api_key",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "format",
+					"parameterType": "QUERY"
+				}
+			],
+			"relativePath": "/echonest_list_genres_50/invoke"
+		},
+		"_id": "wm-wm.ServiceVariable1432014905334",
+		"name": "Echonest_list_genres_50Invoke"
 	}
 }

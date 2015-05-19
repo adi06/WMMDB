@@ -10,6 +10,7 @@
     <import resource="classpath:echonest_artist_data.spring.xml"/>
     <import resource="classpath:echonest_jazz.spring.xml"/>
     <import resource="classpath:echonest_list_genres.spring.xml"/>
+    <import resource="classpath:echonest_list_genres_50.spring.xml"/>
     <import resource="classpath:list_genres.spring.xml"/>
     <import resource="classpath:metabroadcast.spring.xml"/>
     <import resource="classpath:profile_genre.spring.xml"/>

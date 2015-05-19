@@ -99,6 +99,14 @@
                         <value>echonest_list_genres.status</value>
                     </list>
                 </entry>
+                <entry key="echonest_list_genres_50">
+                    <list>
+                        <value>echonest_list_genres_50.response</value>
+                        <value>echonest_list_genres_50.status</value>
+                        <value>echonest_list_genres_50.genresEntryItem</value>
+                        <value>echonest_list_genres_50.RootResponse</value>
+                    </list>
+                </entry>
                 <entry key="list_genres">
                     <list>
                         <value>list_genres.genresEntryItem</value>

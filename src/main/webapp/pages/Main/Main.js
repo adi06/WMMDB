@@ -18,4 +18,10 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
          */
     };
 
-}]);
+
+        $scope.picture3Click = function($event, $isolateScope){ 
+			
+        };
+ 
+    }
+]);

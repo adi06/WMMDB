@@ -2,17 +2,12 @@
     <wm-content name="content1">
         <wm-page-content name="page_content1" columnwidth="12">
             <wm-container content="header" show="true" height="100" name="container1"></wm-container>
-            <wm-livelist listclass="list-group" itemclass="list-group-item" name="livelist3" dataset="bind:Variables.Echonest_list_genresInvoke.dataSet.response.genres">
+            <wm-livelist dataset="bind:Variables.Echonest_list_genres_50Invoke.dataSet.response.genres" listclass="list-group" itemclass="list-group-item" name="livelist3">
                 <wm-listtemplate layout="thumbnail" name="listtemplate3">
-                    <wm-container class="thumbnail" name="container17">
-                        <wm-picture picturesource="resources/images/imagelists/Music-genres.png" pictureaspect="Both" class="picture" shape="thumbnail" name="picture8"></wm-picture>
-                        <wm-container class="caption" data-template-ctr="true" name="container18">
-                            <wm-composite name="composite1">
-                                <wm-label name="label7" class="col-md-3"></wm-label>
-                                <wm-container name="container6" class="col-md-9">
-                                    <wm-select dataset="bind:Variables.Echonest_list_genresInvoke.dataSet.response.genres" name="select1"></wm-select>
-                                </wm-container>
-                            </wm-composite>
+                    <wm-container name="container7" class="thumbnail">
+                        <wm-picture name="picture4" class="picture" shape="thumbnail" height="100"></wm-picture>
+                        <wm-container name="container8" class="caption" data-template-ctr="true">
+                            <wm-label name="label2" width="100%" caption="bind:Variables.Echonest_list_genres_50Invoke.dataSet.response.genres.name"></wm-label>
                         </wm-container>
                     </wm-container>
                 </wm-listtemplate>
@@ -22,7 +17,7 @@
                     <wm-layoutgrid name="layoutgrid1" class="gridlayout">
                         <wm-gridrow name="gridrow1">
                             <wm-gridcolumn name="gridcolumn1" columnwidth="2" data-template-ctr="true">
-                                <wm-picture name="picture3" class="picture" shape="rounded" width="100"></wm-picture>
+                                <wm-picture name="picture3" class="picture" shape="rounded" width="100" on-click="picture3Click($event, $scope)"></wm-picture>
                             </wm-gridcolumn>
                             <wm-gridcolumn name="gridcolumn2" columnwidth="10" data-template-ctr="true"></wm-gridcolumn>
                         </wm-gridrow>
