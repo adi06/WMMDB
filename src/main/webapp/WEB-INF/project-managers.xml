@@ -3,6 +3,16 @@
     <bean class="com.wavemaker.runtime.service.TypeManager" parent="typeManagerBase" scope="singleton" id="typeManager">
         <property name="types">
             <map merge="true">
+                <entry key="artist_bio">
+                    <list>
+                        <value>artist_bio.license</value>
+                        <value>artist_bio.artist</value>
+                        <value>artist_bio.biographiesEntryItem</value>
+                        <value>artist_bio.RootResponse</value>
+                        <value>artist_bio.status</value>
+                        <value>artist_bio.response</value>
+                    </list>
+                </entry>
                 <entry key="artist_data">
                     <list>
                         <value>artist_data.region</value>
@@ -38,6 +48,16 @@
                         <value>artist_image.license</value>
                     </list>
                 </entry>
+                <entry key="artist_loc">
+                    <list>
+                        <value>artist_loc.response</value>
+                        <value>artist_loc.artist_location</value>
+                        <value>artist_loc.artist</value>
+                        <value>artist_loc.RootResponse</value>
+                        <value>artist_loc.region</value>
+                        <value>artist_loc.status</value>
+                    </list>
+                </entry>
                 <entry key="artist_songs">
                     <list>
                         <value>artist_songs.status</value>
@@ -54,12 +74,39 @@
                         <value>artist_url.RootResponse</value>
                     </list>
                 </entry>
+                <entry key="artist_urls">
+                    <list>
+                        <value>artist_urls.urls</value>
+                        <value>artist_urls.artist</value>
+                        <value>artist_urls.response</value>
+                        <value>artist_urls.RootResponse</value>
+                        <value>artist_urls.status</value>
+                    </list>
+                </entry>
                 <entry key="artist_video">
                     <list>
                         <value>artist_video.RootResponse</value>
                         <value>artist_video.videoEntryItem</value>
                         <value>artist_video.response</value>
                         <value>artist_video.status</value>
+                    </list>
+                </entry>
+                <entry key="artist_videos">
+                    <list>
+                        <value>artist_videos.response</value>
+                        <value>artist_videos.RootResponse</value>
+                        <value>artist_videos.videoEntryItem</value>
+                        <value>artist_videos.artist</value>
+                        <value>artist_videos.status</value>
+                    </list>
+                </entry>
+                <entry key="desc">
+                    <list>
+                        <value>desc.response</value>
+                        <value>desc.RootResponse</value>
+                        <value>desc.urls</value>
+                        <value>desc.genresEntryItem</value>
+                        <value>desc.status</value>
                     </list>
                 </entry>
                 <entry key="echonest">
@@ -98,24 +145,6 @@
                         <value>echonest_artist_data.videoEntryItem</value>
                     </list>
                 </entry>
-                <entry key="echonest_genre_prof">
-                    <list>
-                        <value>echonest_genre_prof.status</value>
-                        <value>echonest_genre_prof.response</value>
-                        <value>echonest_genre_prof.urls</value>
-                        <value>echonest_genre_prof.RootResponse</value>
-                        <value>echonest_genre_prof.genresEntryItem</value>
-                    </list>
-                </entry>
-                <entry key="echonest_genre_profile">
-                    <list>
-                        <value>echonest_genre_profile.genresEntryItem</value>
-                        <value>echonest_genre_profile.response</value>
-                        <value>echonest_genre_profile.RootResponse</value>
-                        <value>echonest_genre_profile.status</value>
-                        <value>echonest_genre_profile.urls</value>
-                    </list>
-                </entry>
                 <entry key="echonest_images_name">
                     <list>
                         <value>echonest_images_name.license</value>
@@ -142,22 +171,21 @@
                         <value>echonest_list_genres_50.RootResponse</value>
                     </list>
                 </entry>
-                <entry key="genre">
+                <entry key="genre_desc">
                     <list>
-                        <value>genre.RootResponse</value>
-                        <value>genre.genresEntryItem</value>
-                        <value>genre.urls</value>
-                        <value>genre.status</value>
-                        <value>genre.response</value>
+                        <value>genre_desc.response</value>
+                        <value>genre_desc.status</value>
+                        <value>genre_desc.genresEntryItem</value>
+                        <value>genre_desc.RootResponse</value>
                     </list>
                 </entry>
-                <entry key="genre_prof">
+                <entry key="genre_url">
                     <list>
-                        <value>genre_prof.status</value>
-                        <value>genre_prof.genresEntryItem</value>
-                        <value>genre_prof.RootResponse</value>
-                        <value>genre_prof.response</value>
-                        <value>genre_prof.urls</value>
+                        <value>genre_url.response</value>
+                        <value>genre_url.urls</value>
+                        <value>genre_url.status</value>
+                        <value>genre_url.genresEntryItem</value>
+                        <value>genre_url.RootResponse</value>
                     </list>
                 </entry>
                 <entry key="list_genres">
@@ -186,15 +214,6 @@
                         <value>metabroadcast.display_title</value>
                         <value>metabroadcast.series</value>
                         <value>metabroadcast.schedule_date</value>
-                    </list>
-                </entry>
-                <entry key="profile_genre">
-                    <list>
-                        <value>profile_genre.status</value>
-                        <value>profile_genre.urls</value>
-                        <value>profile_genre.genresEntryItem</value>
-                        <value>profile_genre.response</value>
-                        <value>profile_genre.RootResponse</value>
                     </list>
                 </entry>
             </map>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="genre_url" CRUDService="false" type="RestService" springFile="genre_url.spring.xml">
+    <operation name="invoke">
+        <parameter name="api_key" typeRef="java.lang.String" isList="false"/>
+        <parameter name="bucket" typeRef="java.lang.String" isList="false"/>
+        <parameter name="name" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="genre_url.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="genre_url.response" name="response" supportsQuickData="false">
+            <element name="genres" typeRef="genre_url.genresEntryItem" isList="true" allowNull="false"/>
+            <element name="status" typeRef="genre_url.status" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="genre_url.urls" name="urls" supportsQuickData="false">
+            <element name="wikipedia_url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="genre_url.status" name="status" supportsQuickData="false">
+            <element name="message" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="code" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="version" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="genre_url.genresEntryItem" name="genresEntryItem" supportsQuickData="false">
+            <element name="urls" typeRef="genre_url.urls" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="genre_url.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="response" typeRef="genre_url.response" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

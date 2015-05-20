@@ -91,59 +91,6 @@
 		"category": "wm.Variable",
 		"_id": "wm-wm.Variable1402640443182"
 	},
-	"artist_serviceVariable": {
-		"name": "artist_serviceVariable",
-		"type": "echonest_artist.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"dataValue": "",
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"name": "bind:Widgets.select2.datavalue"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "echonest_artist",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"columnField": "--none--",
-		"dataField": "--none--",
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-wm.ServiceVariable1431930675942",
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "name",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "bucket",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/echonest_artist/invoke"
-		}
-	},
 	"EchonestInvoke": {
 		"name": "EchonestInvoke",
 		"type": "echonest.RootResponse",
@@ -164,7 +111,7 @@
 		"operation": "invoke",
 		"operationType": null,
 		"startUpdate": true,
-		"autoUpdate": true,
+		"autoUpdate": false,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
 		"serviceType": "RestService",
@@ -245,7 +192,7 @@
 		},
 		"dataBinding": {
 			"api_key": "9DHD6YRBIEQATUGO2",
-			"id": "ARH6W4X1187B99274F",
+			"id": "bind:Variables.Artist_Id.dataSet.dataValue",
 			"format": "json",
 			"results": "1"
 		},
@@ -255,8 +202,9 @@
 		"designMaxResults": 10,
 		"service": "artist_image",
 		"operation": "invoke",
+		"operationType": null,
 		"startUpdate": false,
-		"autoUpdate": false,
+		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
 		"serviceType": "RestService",
@@ -386,53 +334,6 @@
 		},
 		"_id": "wm-wm.ServiceVariable1431956667125"
 	},
-	"Artist_songsInvoke": {
-		"name": "Artist_songsInvoke",
-		"type": "artist_songs.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"id": "ARH6W4X1187B99274F",
-			"format": "json"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "artist_songs",
-		"operation": "invoke",
-		"startUpdate": false,
-		"autoUpdate": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "id",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/artist_songs/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1431956717206"
-	},
 	"Echonest_list_genres_50Invoke": {
 		"name": "Echonest_list_genres_50Invoke",
 		"type": "echonest_list_genres_50.RootResponse",
@@ -444,7 +345,7 @@
 		"dataBinding": {
 			"api_key": "9DHD6YRBIEQATUGO2",
 			"format": "json",
-			"results": "50"
+			"results": "1500"
 		},
 		"saveInPhonegap": false,
 		"firstRow": 0,
@@ -480,51 +381,6 @@
 			"relativePath": "/echonest_list_genres_50/invoke"
 		},
 		"_id": "wm-wm.ServiceVariable1432014905334"
-	},
-	"serviceVariable": {
-		"name": "serviceVariable",
-		"type": "echonest_genre_profile.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "echonest_genre_profile",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "bucket",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "name",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/echonest_genre_profile/invoke"
-		},
-		"category": "wm.ServiceVariable",
-		"_id": "wm-wm.ServiceVariable1432028099678"
 	},
 	"Echonest_images_nameInvoke": {
 		"name": "Echonest_images_nameInvoke",
@@ -589,6 +445,7 @@
 		"_id": "wm-wm.NavigationVariable1432030624934"
 	},
 	"Artist_Id": {
+		"name": "Artist_Id",
 		"type": "string",
 		"isList": false,
 		"owner": "App",
@@ -596,10 +453,320 @@
 			"dataValue": ""
 		},
 		"dataBinding": {
-			"dataValue": "bind:Variables.Echonest_images_nameInvoke.dataSet.response.artists[0].id"
+			"dataValue": "bind:Widgets.livelist2.selecteditem.id"
 		},
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
 		"_id": "wm-wm.Variable1432034545668"
+	},
+	"artist": {
+		"name": "artist",
+		"type": "artist_data.RootResponse",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": {
+			"id": "",
+			"api_key": "9DHD6YRBIEQATUGO2"
+		},
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "artist_data",
+		"operation": "invoke",
+		"operationType": null,
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "RestService",
+		"wmServiceOperationInfo": {
+			"httpMethod": "GET",
+			"name": "invoke",
+			"parameters": [
+				{
+					"name": "id",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "api_key",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "bucket",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "format",
+					"parameterType": "QUERY"
+				}
+			],
+			"relativePath": "/artist_data/invoke"
+		},
+		"category": "wm.ServiceVariable",
+		"_id": "wm-wm.ServiceVariable1432037662206"
+	},
+	"Artist_name": {
+		"name": "Artist_name",
+		"type": "string",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": {
+			"dataValue": "bind:Widgets.livelist2.selecteditem.name"
+		},
+		"saveInPhonegap": false,
+		"category": "wm.Variable",
+		"_id": "wm-wm.Variable1432039596474"
+	},
+	"Artist_bioInvoke": {
+		"name": "Artist_bioInvoke",
+		"type": "artist_bio.RootResponse",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": {
+			"api_key": "9DHD6YRBIEQATUGO2",
+			"id": "bind:Widgets.livelist2.selecteditem.id",
+			"bucket": "biographies",
+			"format": "json"
+		},
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "artist_bio",
+		"operation": "invoke",
+		"operationType": null,
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "RestService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "GET",
+			"name": "invoke",
+			"parameters": [
+				{
+					"name": "id",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "api_key",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "bucket",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "format",
+					"parameterType": "QUERY"
+				}
+			],
+			"relativePath": "/artist_bio/invoke"
+		},
+		"_id": "wm-wm.ServiceVariable1432101429834"
+	},
+	"Artist_locInvoke": {
+		"name": "Artist_locInvoke",
+		"type": "artist_loc.RootResponse",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": {
+			"api_key": "9DHD6YRBIEQATUGO2",
+			"id": "bind:Variables.Artist_Id.dataSet.dataValue",
+			"bucket": "artist_location"
+		},
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "artist_loc",
+		"operation": "invoke",
+		"operationType": null,
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "RestService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "GET",
+			"name": "invoke",
+			"parameters": [
+				{
+					"name": "id",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "api_key",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "bucket",
+					"parameterType": "QUERY"
+				}
+			],
+			"relativePath": "/artist_loc/invoke"
+		},
+		"_id": "wm-wm.ServiceVariable1432101532725"
+	},
+	"Artist_urlsInvoke": {
+		"name": "Artist_urlsInvoke",
+		"type": "artist_urls.RootResponse",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": {
+			"api_key": "9DHD6YRBIEQATUGO2",
+			"id": "bind:Variables.Artist_Id.dataSet.dataValue",
+			"bucket": "urls"
+		},
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "artist_urls",
+		"operation": "invoke",
+		"operationType": null,
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "RestService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "GET",
+			"name": "invoke",
+			"parameters": [
+				{
+					"name": "id",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "api_key",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "bucket",
+					"parameterType": "QUERY"
+				}
+			],
+			"relativePath": "/artist_urls/invoke"
+		},
+		"_id": "wm-wm.ServiceVariable1432102737436"
+	},
+	"Artist_videosInvoke": {
+		"name": "Artist_videosInvoke",
+		"type": "artist_videos.RootResponse",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": {
+			"api_key": "9DHD6YRBIEQATUGO2",
+			"id": "bind:Variables.Artist_Id.dataSet.dataValue",
+			"bucket": "video"
+		},
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "artist_videos",
+		"operation": "invoke",
+		"operationType": null,
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "RestService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "GET",
+			"name": "invoke",
+			"parameters": [
+				{
+					"name": "id",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "api_key",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "bucket",
+					"parameterType": "QUERY"
+				}
+			],
+			"relativePath": "/artist_videos/invoke"
+		},
+		"_id": "wm-wm.ServiceVariable1432103876032"
+	},
+	"Artist_songsInvoke": {
+		"name": "Artist_songsInvoke",
+		"type": "artist_songs.RootResponse",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": {
+			"api_key": "9DHD6YRBIEQATUGO2",
+			"id": "bind:Variables.Artist_Id.dataSet.dataValue",
+			"format": "json"
+		},
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "artist_songs",
+		"operation": "invoke",
+		"operationType": null,
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "RestService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "GET",
+			"name": "invoke",
+			"parameters": [
+				{
+					"name": "id",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "api_key",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "format",
+					"parameterType": "QUERY"
+				}
+			],
+			"relativePath": "/artist_songs/invoke"
+		},
+		"_id": "wm-wm.ServiceVariable1431956717206"
 	}
 }

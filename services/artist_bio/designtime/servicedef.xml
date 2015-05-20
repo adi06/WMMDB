@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="artist_bio" CRUDService="false" type="RestService" springFile="artist_bio.spring.xml">
+    <operation name="invoke">
+        <parameter name="id" typeRef="java.lang.String" isList="false"/>
+        <parameter name="api_key" typeRef="java.lang.String" isList="false"/>
+        <parameter name="bucket" typeRef="java.lang.String" isList="false"/>
+        <parameter name="format" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="artist_bio.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="artist_bio.license" name="license" supportsQuickData="false">
+            <element name="attribution-url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="type" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="attribution" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="version" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_bio.artist" name="artist" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="biographies" typeRef="artist_bio.biographiesEntryItem" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_bio.biographiesEntryItem" name="biographiesEntryItem" supportsQuickData="false">
+            <element name="site" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="text" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="truncated" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="license" typeRef="artist_bio.license" isList="false" allowNull="false"/>
+            <element name="url" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_bio.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="response" typeRef="artist_bio.response" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_bio.status" name="status" supportsQuickData="false">
+            <element name="message" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="code" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="version" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="artist_bio.response" name="response" supportsQuickData="false">
+            <element name="status" typeRef="artist_bio.status" isList="false" allowNull="false"/>
+            <element name="artist" typeRef="artist_bio.artist" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>
