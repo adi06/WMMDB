@@ -21,7 +21,7 @@
                 <wm-label name="label3_1" width="438" caption="bind:Variables.Genre_descInvoke.dataSet.response.genres[0].description"></wm-label>
                 <wm-anchor name="anchor1" hyperlink="bind:Variables.Genre_urlInvoke.dataSet.response.genres[0].urls.wikipedia_url" show="true" caption="bind:Variables.Genre_urlInvoke.dataSet.response.genres[0].urls.wikipedia_url"></wm-anchor>
             </wm-container>
-            <wm-livelist listclass="list-group" itemclass="list-group-item" name="livelist2" dataset="bind:Variables.Echonest_images_nameInvoke.dataSet.response.artists" itemsperrow="4" shownavigation="false">
+            <wm-livelist listclass="list-group" itemclass="list-group-item" name="livelist2" dataset="bind:Variables.Echonest_images_nameInvoke.dataSet.response.artists" itemsperrow="4" shownavigation="false" showrecordcount="true" selectfirstitem="false">
                 <wm-listtemplate layout="thumbnail" name="listtemplate2">
                     <wm-container class="thumbnail" name="container6">
                         <wm-picture class="picture" shape="thumbnail" height="100" name="picture4_1" picturesource="bind:Variables.Echonest_images_nameInvoke.dataSet.response.artists[0].images[0].url" on-click="goToPage-Profile"></wm-picture>

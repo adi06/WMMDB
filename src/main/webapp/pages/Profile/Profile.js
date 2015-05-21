@@ -31,4 +31,9 @@ Application.$controller("ProfilePageController", ["$scope", function($scope) {
         $scope.nameTemp = name
     };
 
+
+    $scope.button2Click = function($event, $isolateScope) {
+        window.location.href = "https://twitter.com/" + $scope.Variables.twitter_heads.dataSet.dataValue
+    };
+
 }]);

@@ -1,0 +1,46 @@
+{
+	"apiDocuments": [{
+		"models": [],
+		"id": null,
+		"endPoints": [{
+			"id": null,
+			"parentId": null,
+			"relativePath": "/sampleJavaOperation",
+			"description": "",
+			"name": "/sampleJavaOperation",
+			"docLink": null,
+			"operations": [{
+				"returnTypeArguments": [],
+				"deprecated": false,
+				"httpMethod": "GET",
+				"consumes": [],
+				"returnType": "string",
+				"id": null,
+				"parentId": null,
+				"fullyQualifiedReturnType": "java.lang.String",
+				"fullyQualifiedReturnTypeArguments": [],
+				"responseMessages": [],
+				"accessSpecifier": "APP_ONLY",
+				"returnTypeArray": false,
+				"methodIdentifier": "sampleJavaOperation-0-17",
+				"description": null,
+				"name": "sampleJavaOperation",
+				"produces": ["application/json"],
+				"docLink": null,
+				"policy": null,
+				"parameters": [],
+				"completePath": null,
+				"notes": null
+			}]
+		}],
+		"relativePath": "/myJava",
+		"description": null,
+		"name": "MyJavaController",
+		"categoryId": 0,
+		"baseURL": null,
+		"fullyQualifiedName": "com.wavemaker.bestoffers.myjavaservice.MyJavaController",
+		"version": "",
+		"productId": 0
+	}],
+	"serviceId": "MyJavaService"
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="twitter_head" CRUDService="false" type="RestService" springFile="twitter_head.spring.xml">
+    <operation name="invoke">
+        <parameter name="id" typeRef="java.lang.String" isList="false"/>
+        <parameter name="api_key" typeRef="java.lang.String" isList="false"/>
+        <parameter name="format" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="twitter_head.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="twitter_head.status" name="status" supportsQuickData="false">
+            <element name="message" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="code" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="version" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="twitter_head.response" name="response" supportsQuickData="false">
+            <element name="status" typeRef="twitter_head.status" isList="false" allowNull="false"/>
+            <element name="artist" typeRef="twitter_head.artist" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="twitter_head.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="response" typeRef="twitter_head.response" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="twitter_head.artist" name="artist" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="twitter" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

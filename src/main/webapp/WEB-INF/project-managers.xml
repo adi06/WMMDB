@@ -3,6 +3,9 @@
     <bean class="com.wavemaker.runtime.service.TypeManager" parent="typeManagerBase" scope="singleton" id="typeManager">
         <property name="types">
             <map merge="true">
+                <entry key="MyJavaService">
+                    <list/>
+                </entry>
                 <entry key="artist_bio">
                     <list>
                         <value>artist_bio.license</value>
@@ -214,6 +217,14 @@
                         <value>metabroadcast.display_title</value>
                         <value>metabroadcast.series</value>
                         <value>metabroadcast.schedule_date</value>
+                    </list>
+                </entry>
+                <entry key="twitter_head">
+                    <list>
+                        <value>twitter_head.status</value>
+                        <value>twitter_head.response</value>
+                        <value>twitter_head.RootResponse</value>
+                        <value>twitter_head.artist</value>
                     </list>
                 </entry>
             </map>

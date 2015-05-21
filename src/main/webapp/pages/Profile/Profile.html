@@ -8,20 +8,16 @@
                             <wm-gridrow name="gridrow2">
                                 <wm-gridcolumn columnwidth="12" horizontalalign="center" paddingtop=".5" paddingbottom=".5" paddingunit="em" name="gridcolumn13">
                                     <wm-picture shape="circle" picturesource="bind:Variables.Artist_imageInvoke.dataSet.response.images[0].url" pictureaspect="Both" textalign="left" bordercolor="#c7c7c7" borderstyle="solid" bordertop="1" borderleft="1" borderright="1"
-                                    borderbottom="1" name="picture1" width="125" height="150"></wm-picture>
-                                    <wm-label width="100%" caption="bind:Variables.Artist_name.dataSet.dataValue" fontweight="bold" class="h2" name="label1" height="24"></wm-label>
+                                    borderbottom="1" name="picture1" width="150" height="200"></wm-picture>
+                                    <wm-label width="100%" caption="bind:Variables.Artist_urlsInvoke.dataSet.response.artist.name" fontweight="bold" class="h2" name="label1" height="24"></wm-label>
                                     <wm-label width="100%" caption="bind:Variables.Artist_locInvoke.dataSet.response.artist.artist_location.country" name="label2"></wm-label>
                                     <wm-anchor caption="bind:Variables.Artist_urlsInvoke.dataSet.response.artist.urls.official_url" display="inline" name="anchor1" hyperlink="bind:Variables.Artist_urlInvoke.dataSet.response.urls.wikipedia_url"></wm-anchor>
                                 </wm-gridcolumn>
                             </wm-gridrow>
                             <wm-gridrow name="gridrow5">
                                 <wm-gridcolumn columnwidth="12" horizontalalign="center" paddingtop=".5" paddingbottom=".5" paddingunit="em" name="gridcolumn6" paddingleft=".5" paddingright=".5">
-                                    <wm-button caption="" iconclass="fa fa-google-plus" paddingunit="em" paddingleft="1" paddingright="1" class="btn-primary" marginleft=".5" marginright=".5" paddingtop=".5" paddingbottom=".5" marginunit="em" fontsize="1.5"
-                                    fontunit="em" margintop=".5" marginbottom=".5" backgroundcolor="#db4437" name="button1" borderstyle="none"></wm-button>
-                                    <wm-button caption="" iconclass="fa fa-twitter" paddingunit="em" paddingleft="1" paddingright="1" class="btn-primary" marginleft=".5" marginright=".5" paddingtop=".5" paddingbottom=".5" marginunit="em" fontsize="1.5"
-                                    fontunit="em" margintop=".5" marginbottom=".5" backgroundcolor="#55acee" name="button2" borderstyle="none"></wm-button>
-                                    <wm-button caption="" iconclass="fa fa-facebook" paddingunit="em" paddingleft="1" paddingright="1" class="btn-primary" marginleft=".5" marginright=".5" paddingtop=".5" paddingbottom=".5" marginunit="em"
-                                    fontsize="1.5" fontunit="em" margintop=".5" marginbottom=".5" backgroundcolor="#3b5998" name="button3" borderstyle="none"></wm-button>
+                                    <wm-button caption="" iconclass="fa fa-twitter" paddingunit="em" paddingleft="1" paddingright="1" class="btn-primary" marginleft=".5" marginright=".5" paddingtop=".5" paddingbottom=".5" marginunit="em" fontsize="1.5" fontunit="em"
+                                    margintop=".5" marginbottom=".5" backgroundcolor="#55acee" name="button2" borderstyle="none" badgevalue="bind:Variables.Twitter_headInvoke.dataSet.response.artist.twitter" type="submit" on-click="button2Click($event, $scope)"></wm-button>
                                 </wm-gridcolumn>
                             </wm-gridrow>
                             <wm-gridrow name="gridrow4">
@@ -87,8 +83,12 @@
                                 <wm-gridcolumn columnwidth="6" name="gridcolumn13_1" paddingtop=".5" paddingbottom=".5" paddingunit="em" paddingleft=".5" paddingright=".5">
                                     <wm-panel class="panel-default" collapsible="false" showheader="true" name="panel1" title="About" marginbottom="0" marginunit="em">
                                         <wm-label name="label11" caption=""></wm-label>
-                                        <wm-label name="label16_1" caption="bind:Variables.Artist_bioInvoke.dataSet.response.artist.biographies[0].text" height="100"></wm-label>
                                         <wm-anchor name="anchor6" hyperlink="bind:Variables.Artist_bioInvoke.dataSet.response.artist.biographies[0].url" caption="bind:Variables.Artist_bioInvoke.dataSet.response.artist.biographies[0].url"></wm-anchor>
+                                        <wm-composite name="composite1">
+                                            <wm-container class="col-md-9" name="container8" width="299" height="200">
+                                                <wm-textarea name="textarea1" datavalue="bind:Variables.Artist_bioInvoke.dataSet.response.artist.biographies[0].text" width="290" height="199" required="false" readonly="true"></wm-textarea>
+                                            </wm-container>
+                                        </wm-composite>
                                     </wm-panel>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="6" name="gridcolumn15" paddingtop=".5" paddingbottom=".5" paddingunit="em" paddingleft=".5" paddingright=".5">
@@ -96,7 +96,7 @@
                                         <wm-anchor name="anchor2" caption="jondoe@jondoe.com" width="100%"></wm-anchor>
                                         <wm-label name="label13" caption="971-001-0022" width="100%"></wm-label>
                                         <wm-label caption="422001111" width="100%" name="label14"></wm-label>
-                                        <wm-anchor caption="bind:Variables.Artist_urlsInvoke.dataSet.response.artist.urls.official_url" width="100%" name="anchor3" hyperlink="bind:Variables.Artist_urlInvoke.dataSet.response.urls.official_url"></wm-anchor>
+                                        <wm-anchor caption="bind:Variables.Artist_urlsInvoke.dataSet.response.artist.urls.official_url" width="100%" name="anchor3" hyperlink="bind:Variables.Artist_urlInvoke.dataSet.response.urls.wikipedia_url"></wm-anchor>
                                     </wm-panel>
                                 </wm-gridcolumn>
                             </wm-gridrow>
@@ -120,11 +120,14 @@
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="3" name="gridcolumn3" paddingtop=".5" paddingbottom=".5" paddingunit="em" class="hidden-sm" paddingleft=".5" paddingright=".5">
                         <wm-panel class="panel-default" collapsible="false" showheader="true" title="Songs" name="panel4">
-                            <wm-livelist listclass="list-group" itemclass="list-group-item" template="true" name="livelist3_1" dataset="bind:Variables.Artist_songsInvoke.dataSet.response.songs">
-                                <wm-listtemplate layout="blank" name="listtemplate3_1">
-                                    <wm-container class="blank" data-template-ctr="true" name="container4_1">
-                                        <wm-icon name="icon1" iconsize="2em" iconclass="glyphicon glyphicon-headphones"></wm-icon>
-                                        <wm-label name="label16" caption="bind:Variables.Artist_songsInvoke.dataSet.response.songs[0].title" class="h4" height="75"></wm-label>
+                            <wm-livelist listclass="list-group" itemclass="list-group-item" template="true" name="livelist3_1" dataset="bind:Variables.Artist_imageInvoke.dataSet.response.images">
+                                <wm-listtemplate layout="media" name="listtemplate3_1">
+                                    <wm-container class="media" name="container4_1">
+                                        <wm-container class="media-body" data-template-ctr="true" name="container6">
+                                            <wm-picture class="picture" shape="rounded" width="100" name="picture3" picturesource="bind:Variables.Artist_imageInvoke.dataSet.response.images[0].url"></wm-picture>
+                                            <wm-icon name="icon1" iconsize="2em" iconclass="glyphicon glyphicon-headphones"></wm-icon>
+                                            <wm-label name="label16" caption="bind:Variables.Artist_songsInvoke.dataSet.response.songs[0].title" class="h4" height="75"></wm-label>
+                                        </wm-container>
                                     </wm-container>
                                 </wm-listtemplate>
                             </wm-livelist>

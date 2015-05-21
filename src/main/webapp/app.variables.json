@@ -194,7 +194,7 @@
 			"api_key": "9DHD6YRBIEQATUGO2",
 			"id": "bind:Variables.Artist_Id.dataSet.dataValue",
 			"format": "json",
-			"results": "1"
+			"results": "10"
 		},
 		"saveInPhonegap": false,
 		"firstRow": 0,
@@ -245,7 +245,7 @@
 		},
 		"dataBinding": {
 			"api_key": "9DHD6YRBIEQATUGO2",
-			"id": "ARH6W4X1187B99274F",
+			"id": "bind:Variables.Artist_Id.dataSet.dataValue",
 			"format": "json"
 		},
 		"saveInPhonegap": false,
@@ -254,8 +254,9 @@
 		"designMaxResults": 10,
 		"service": "artist_url",
 		"operation": "invoke",
+		"operationType": null,
 		"startUpdate": false,
-		"autoUpdate": false,
+		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
 		"serviceType": "RestService",
@@ -534,7 +535,7 @@
 		},
 		"dataBinding": {
 			"api_key": "9DHD6YRBIEQATUGO2",
-			"id": "bind:Widgets.livelist2.selecteditem.id",
+			"id": "bind:Variables.Artist_Id.dataSet.dataValue",
 			"bucket": "biographies",
 			"format": "json"
 		},
@@ -768,5 +769,113 @@
 			"relativePath": "/artist_songs/invoke"
 		},
 		"_id": "wm-wm.ServiceVariable1431956717206"
+	},
+	"MyJavaServiceSampleJavaOperation": {
+		"name": "MyJavaServiceSampleJavaOperation",
+		"type": "java.lang.String",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": {},
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "MyJavaService",
+		"operation": "sampleJavaOperation",
+		"startUpdate": false,
+		"autoUpdate": false,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "JavaService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "GET",
+			"name": "sampleJavaOperation",
+			"parameters": [],
+			"relativePath": "/myJava/sampleJavaOperation"
+		},
+		"_id": "wm-wm.ServiceVariable1432125273176"
+	},
+	"Artist_Image": {
+		"type": "string",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": {
+			"dataValue": "bind:Widgets.livelist2.selecteditem.images.url"
+		},
+		"saveInPhonegap": false,
+		"category": "wm.Variable",
+		"_id": "wm-wm.Variable1432184377871",
+		"name": "Artist_Image"
+	},
+	"Twitter_headInvoke": {
+		"type": "twitter_head.RootResponse",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": {
+			"api_key": "9DHD6YRBIEQATUGO2",
+			"id": "bind:Variables.Artist_Id.dataSet.dataValue",
+			"format": "json"
+		},
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "twitter_head",
+		"operation": "invoke",
+		"operationType": null,
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "RestService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "GET",
+			"name": "invoke",
+			"parameters": [
+				{
+					"name": "id",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "api_key",
+					"parameterType": "QUERY"
+				},
+				{
+					"name": "format",
+					"parameterType": "QUERY"
+				}
+			],
+			"relativePath": "/twitter_head/invoke"
+		},
+		"_id": "wm-wm.ServiceVariable1432184852091",
+		"name": "Twitter_headInvoke"
+	},
+	"twitter_heads": {
+		"type": "string",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": {
+			"dataValue": "bind:Variables.Twitter_headInvoke.dataSet.response.artist.twitter"
+		},
+		"saveInPhonegap": false,
+		"category": "wm.Variable",
+		"_id": "wm-wm.Variable1432186257854",
+		"name": "twitter_heads"
 	}
 }
