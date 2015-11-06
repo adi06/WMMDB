@@ -5,5 +5,5 @@
         <property name="serviceId" value="MyJavaService"/>
         <property name="serviceType" ref="JavaService"/>
     </bean>
-    <bean class="com.wavemaker.bestoffers.myjavaservice.MyJavaController" id="MyJavaServiceController"/>
+    <bean class="com.wavemaker.bestoffers.myjavaservice.controller.MyJavaController" id="MyJavaServiceController"/>
 </beans>

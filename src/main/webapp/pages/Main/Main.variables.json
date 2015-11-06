@@ -1,98 +1,182 @@
 {
-	"Genre_descInvoke": {
-		"name": "Genre_descInvoke",
-		"type": "genre_desc.RootResponse",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"name": "bind:Widgets.select3.datavalue",
-			"bucket": "description"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "genre_desc",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "bucket",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "name",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/genre_desc/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1432100124295"
-	},
-	"Genre_urlInvoke": {
-		"name": "Genre_urlInvoke",
-		"type": "genre_url.RootResponse",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"name": "bind:Widgets.select3.datavalue",
-			"bucket": "urls"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "genre_url",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "bucket",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "name",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/genre_url/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1432100261028"
-	}
+  "Artist_urlInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/artist_url/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "query"
+      }, {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "format",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "artist_url.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-wm.ServiceVariable1431956643497",
+    "dataBinding" : {
+      "id" : "bind:Variables.Artist_Id.dataSet.dataValue",
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "format" : "json"
+    },
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : null,
+    "name" : "Artist_urlInvoke",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "artist_url"
+  },
+  "Artist_imageInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/artist_image/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "query"
+      }, {
+        "name" : "results",
+        "parameterType" : "query"
+      }, {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "format",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "artist_image.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-wm.ServiceVariable1431956545429",
+    "dataBinding" : {
+      "id" : "bind:Variables.Artist_Id.dataSet.dataValue",
+      "results" : "1",
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "format" : "json"
+    },
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : null,
+    "name" : "Artist_imageInvoke",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "artist_image"
+  },
+  "Genre_urlInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/genre_url/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "bucket",
+        "parameterType" : "query"
+      }, {
+        "name" : "name",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "genre_url.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-wm.ServiceVariable1432100261028",
+    "dataBinding" : {
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "bucket" : "urls",
+      "name" : "bind:Widgets.select3.datavalue"
+    },
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : null,
+    "name" : "Genre_urlInvoke",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "genre_url"
+  },
+  "Genre_descInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/genre_desc/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "bucket",
+        "parameterType" : "query"
+      }, {
+        "name" : "name",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "genre_desc.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-wm.ServiceVariable1432100124295",
+    "dataBinding" : {
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "bucket" : "description",
+      "name" : "bind:Widgets.select3.datavalue"
+    },
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : null,
+    "name" : "Genre_descInvoke",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "genre_desc"
+  }
 }

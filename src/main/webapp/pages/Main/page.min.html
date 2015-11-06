@@ -1,0 +1,261 @@
+<style id="Main.css">
+
+</style>
+<script id="Main.js">
+Application.$controller("MainPageController", ["$scope", function($scope) {
+    "use strict";
+
+    /* perform any action with the variables inside this block(on-page-load) */
+    $scope.onPageVariablesReady = function() {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. $scope.Variables.staticVariable1.getData()
+         */
+        //   $scope.Variables.Echonest_list_genresInvoke.update();
+    };
+    /* perform any action with widgets inside this block */
+    $scope.onPageReady = function() {
+        /*
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+         */
+    };
+
+
+    $scope.picture3Click = function($event, $isolateScope) {
+
+    };
+
+
+    $scope.picture4_1Click = function($event, $isolateScope) {
+        //$scope.Variables.["goToPage-Profile"].navigate()
+        //window.location.href = "#/Profile/" + $scope.Widgets.livelist2.selecteditem.id + "/" + $scope.Widgets.livelist2.selecteditem.name
+    };
+
+
+}]);
+</script>
+<script id="Main.variables.json">
+var _MainPage_Variables_ ={
+  "Artist_urlInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/artist_url/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "query"
+      }, {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "format",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "artist_url.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-wm.ServiceVariable1431956643497",
+    "dataBinding" : {
+      "id" : "bind:Variables.Artist_Id.dataSet.dataValue",
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "format" : "json"
+    },
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : null,
+    "name" : "Artist_urlInvoke",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "artist_url"
+  },
+  "Artist_imageInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/artist_image/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "query"
+      }, {
+        "name" : "results",
+        "parameterType" : "query"
+      }, {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "format",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "artist_image.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-wm.ServiceVariable1431956545429",
+    "dataBinding" : {
+      "id" : "bind:Variables.Artist_Id.dataSet.dataValue",
+      "results" : "1",
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "format" : "json"
+    },
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : null,
+    "name" : "Artist_imageInvoke",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "artist_image"
+  },
+  "Genre_urlInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/genre_url/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "bucket",
+        "parameterType" : "query"
+      }, {
+        "name" : "name",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "genre_url.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-wm.ServiceVariable1432100261028",
+    "dataBinding" : {
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "bucket" : "urls",
+      "name" : "bind:Widgets.select3.datavalue"
+    },
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : null,
+    "name" : "Genre_urlInvoke",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "genre_url"
+  },
+  "Genre_descInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/genre_desc/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "bucket",
+        "parameterType" : "query"
+      }, {
+        "name" : "name",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "genre_desc.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-wm.ServiceVariable1432100124295",
+    "dataBinding" : {
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "bucket" : "description",
+      "name" : "bind:Widgets.select3.datavalue"
+    },
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : null,
+    "name" : "Genre_descInvoke",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "genre_desc"
+  }
+}
+</script>
+<script id="Main.html" type="text/ng-template">
+<wm-page name="page1" layouttype="blank" columns="1" data-ng-controller="MainPageController">
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-container content="header" show="true" height="100" name="container1" width="400"></wm-container>
+            <wm-picture name="picture6" picturesource="resources/images/imagelists/Music-genres.png" pictureaspect="Both" height="450"></wm-picture>
+            <wm-layoutgrid name="layoutgrid2">
+                --{{Variables.Artist_Id.dataSet}}--
+                <br/> --{{Variables.Artist_Image.dataSet}}--
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn10">
+                        <wm-picture name="picture4" picturesource="resources/images/imagelists/images.png" pictureaspect="Both" width="180" height="58"></wm-picture>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="9" name="gridcolumn11">
+                        <wm-composite name="composite3" captionposition="left">
+                            <wm-container class="col-md-9" name="container5">
+                                <wm-select name="select3" dataset="bind:Variables.Echonest_list_genres_50Invoke.dataSet.response.genres" width="403" height="37" readonly="false" datafield="name" displayfield="name"></wm-select>
+                            </wm-container>
+                        </wm-composite>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-container name="container8">
+                <wm-label name="label3_1" width="438" caption="bind:Variables.Genre_descInvoke.dataSet.response.genres[0].description"></wm-label>
+                <wm-anchor name="anchor1" hyperlink="bind:Variables.Genre_urlInvoke.dataSet.response.genres[0].urls.wikipedia_url" show="true" caption="bind:Variables.Genre_urlInvoke.dataSet.response.genres[0].urls.wikipedia_url"></wm-anchor>
+            </wm-container>
+            <wm-livelist listclass="list-group" itemclass="list-group-item" name="livelist2" dataset="bind:Variables.Echonest_images_nameInvoke.dataSet.response.artists" itemsperrow="4" shownavigation="false" showrecordcount="true" selectfirstitem="false">
+                <wm-listtemplate layout="thumbnail" name="listtemplate2">
+                    <wm-container class="thumbnail" name="container6">
+                        <wm-picture class="picture" shape="thumbnail" height="121" name="picture4_1" picturesource="bind:Variables.Echonest_images_nameInvoke.dataSet.response.artists[0].images[0].url" on-click="goToPage-Profile" width="179"></wm-picture>
+                        <wm-container class="caption" data-template-ctr="true" name="container7">
+                            <wm-label width="100%" caption="bind:Variables.Echonest_images_nameInvoke.dataSet.response.artists.name" name="label3"></wm-label>
+                        </wm-container>
+                    </wm-container>
+                </wm-listtemplate>
+            </wm-livelist>
+        </wm-page-content>
+    </wm-content>
+</wm-page>
+</script>

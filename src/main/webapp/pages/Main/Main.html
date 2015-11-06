@@ -4,6 +4,8 @@
             <wm-container content="header" show="true" height="100" name="container1" width="400"></wm-container>
             <wm-picture name="picture6" picturesource="resources/images/imagelists/Music-genres.png" pictureaspect="Both" height="450"></wm-picture>
             <wm-layoutgrid name="layoutgrid2">
+                --{{Variables.Artist_Id.dataSet}}--
+                <br/> --{{Variables.Artist_Image.dataSet}}--
                 <wm-gridrow name="gridrow4">
                     <wm-gridcolumn columnwidth="2" name="gridcolumn10">
                         <wm-picture name="picture4" picturesource="resources/images/imagelists/images.png" pictureaspect="Both" width="180" height="58"></wm-picture>
@@ -24,7 +26,7 @@
             <wm-livelist listclass="list-group" itemclass="list-group-item" name="livelist2" dataset="bind:Variables.Echonest_images_nameInvoke.dataSet.response.artists" itemsperrow="4" shownavigation="false" showrecordcount="true" selectfirstitem="false">
                 <wm-listtemplate layout="thumbnail" name="listtemplate2">
                     <wm-container class="thumbnail" name="container6">
-                        <wm-picture class="picture" shape="thumbnail" height="100" name="picture4_1" picturesource="bind:Variables.Echonest_images_nameInvoke.dataSet.response.artists[0].images[0].url" on-click="goToPage-Profile"></wm-picture>
+                        <wm-picture class="picture" shape="thumbnail" height="121" name="picture4_1" picturesource="bind:Variables.Echonest_images_nameInvoke.dataSet.response.artists[0].images[0].url" on-click="goToPage-Profile" width="179"></wm-picture>
                         <wm-container class="caption" data-template-ctr="true" name="container7">
                             <wm-label width="100%" caption="bind:Variables.Echonest_images_nameInvoke.dataSet.response.artists.name" name="label3"></wm-label>
                         </wm-container>

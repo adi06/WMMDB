@@ -7,4 +7,9 @@ Application.run(function ($rootScope) {
          * e.g. $rootScope.Variables.staticVariable1.getData()
          */
     };
+
+	$rootScope.Echonest_images_nameInvokeonSuccess = function(variable, data){
+			console.warn("data", data)
+	};
+
 });

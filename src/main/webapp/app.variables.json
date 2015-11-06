@@ -1,881 +1,735 @@
 {
-	"MetabroadcastInvoke": {
-		"name": "MetabroadcastInvoke",
-		"type": "metabroadcastRootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"source": "pressassociation.com",
-			"annotations": "brand_summary,broadcasts,channel,channels,channel_summary,description",
-			"type": "item",
-			"key": "c1e92985ec124202b7f07140bcde6e3f"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "metabroadcast",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": false,
-		"autoUpdate": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "source",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "annotations",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "type",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "key",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/metabroadcast/invoke"
-		},
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-wm.ServiceVariable1431600352006",
-		"isDefault": true
-	},
-	"imageVariable": {
-		"name": "imageVariable",
-		"type": "string",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"dataValue": "http://www.hdwallpapers.in/walls/2011_kung_fu_panda-wide.jpg"
-		},
-		"saveInPhonegap": false,
-		"category": "wm.Variable",
-		"_id": "wm-wm.Variable1431666424925"
-	},
-	"goToPage-Main": {
-		"name": "goToPage-Main",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "Main",
-		"dataBinding": {},
-		"category": "wm.NavigationVariable",
-		"_id": "wm-wm.NavigationVariable1389180517517"
-	},
-	"supportedLocale": {
-		"name": "supportedLocale",
-		"type": "string",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"en": "English"
-		},
-		"dataBinding": {
-			"dataValue": ""
-		},
-		"saveInPhonegap": false,
-		"category": "wm.Variable",
-		"_id": "wm-wm.Variable1402640443182"
-	},
-	"EchonestInvoke": {
-		"name": "EchonestInvoke",
-		"type": "echonest.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"format": "json"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "echonest",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": true,
-		"autoUpdate": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/echonest/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1431945284192"
-	},
-	"Artist_id_nameInvoke": {
-		"name": "Artist_id_nameInvoke",
-		"type": "artist_id_name.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"format": "json",
-			"name": "bind:Widgets.select3.datavalue"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "artist_id_name",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "name",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/artist_id_name/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1431956512830"
-	},
-	"Artist_imageInvoke": {
-		"name": "Artist_imageInvoke",
-		"type": "artist_image.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"id": "bind:Variables.Artist_Id.dataSet.dataValue",
-			"format": "json",
-			"results": "10"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "artist_image",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "id",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "results",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/artist_image/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1431956545429"
-	},
-	"Artist_urlInvoke": {
-		"name": "Artist_urlInvoke",
-		"type": "artist_url.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"id": "bind:Variables.Artist_Id.dataSet.dataValue",
-			"format": "json"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "artist_url",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "id",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/artist_url/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1431956643497"
-	},
-	"Artist_videoInvoke": {
-		"name": "Artist_videoInvoke",
-		"type": "artist_video.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"id": "ARH6W4X1187B99274F",
-			"format": "json",
-			"results": "1"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "artist_video",
-		"operation": "invoke",
-		"startUpdate": false,
-		"autoUpdate": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "id",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "results",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/artist_video/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1431956667125"
-	},
-	"Echonest_list_genres_50Invoke": {
-		"name": "Echonest_list_genres_50Invoke",
-		"type": "echonest_list_genres_50.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"format": "json",
-			"results": "1500"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "echonest_list_genres_50",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": true,
-		"autoUpdate": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "results",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/echonest_list_genres_50/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1432014905334"
-	},
-	"Echonest_images_nameInvoke": {
-		"name": "Echonest_images_nameInvoke",
-		"type": "echonest_images_name.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"format": "json",
-			"name": "bind:Widgets.select3.datavalue",
-			"bucket": "images"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "echonest_images_name",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "bucket",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "name",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/echonest_images_name/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1432029974727"
-	},
-	"goToPage-Profile": {
-		"name": "goToPage-Profile",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "Profile",
-		"dataBinding": {},
-		"category": "wm.NavigationVariable",
-		"_id": "wm-wm.NavigationVariable1432030624934"
-	},
-	"Artist_Id": {
-		"name": "Artist_Id",
-		"type": "string",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"dataValue": "bind:Widgets.livelist2.selecteditem.id"
-		},
-		"saveInPhonegap": false,
-		"category": "wm.Variable",
-		"_id": "wm-wm.Variable1432034545668"
-	},
-	"artist": {
-		"name": "artist",
-		"type": "artist_data.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"id": "",
-			"api_key": "9DHD6YRBIEQATUGO2"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "artist_data",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "id",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "bucket",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/artist_data/invoke"
-		},
-		"category": "wm.ServiceVariable",
-		"_id": "wm-wm.ServiceVariable1432037662206"
-	},
-	"Artist_name": {
-		"name": "Artist_name",
-		"type": "string",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"dataValue": "bind:Widgets.livelist2.selecteditem.name"
-		},
-		"saveInPhonegap": false,
-		"category": "wm.Variable",
-		"_id": "wm-wm.Variable1432039596474"
-	},
-	"Artist_bioInvoke": {
-		"name": "Artist_bioInvoke",
-		"type": "artist_bio.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"id": "bind:Variables.Artist_Id.dataSet.dataValue",
-			"bucket": "biographies",
-			"format": "json"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "artist_bio",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "id",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "bucket",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/artist_bio/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1432101429834"
-	},
-	"Artist_locInvoke": {
-		"name": "Artist_locInvoke",
-		"type": "artist_loc.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"id": "bind:Variables.Artist_Id.dataSet.dataValue",
-			"bucket": "artist_location"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "artist_loc",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "id",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "bucket",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/artist_loc/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1432101532725"
-	},
-	"Artist_urlsInvoke": {
-		"name": "Artist_urlsInvoke",
-		"type": "artist_urls.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"id": "bind:Variables.Artist_Id.dataSet.dataValue",
-			"bucket": "urls"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "artist_urls",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "id",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "bucket",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/artist_urls/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1432102737436"
-	},
-	"Artist_videosInvoke": {
-		"name": "Artist_videosInvoke",
-		"type": "artist_videos.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"id": "bind:Variables.Artist_Id.dataSet.dataValue",
-			"bucket": "video"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "artist_videos",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "id",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "bucket",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/artist_videos/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1432103876032"
-	},
-	"Artist_songsInvoke": {
-		"name": "Artist_songsInvoke",
-		"type": "artist_songs.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"id": "bind:Variables.Artist_Id.dataSet.dataValue",
-			"format": "json"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "artist_songs",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "id",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/artist_songs/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1431956717206"
-	},
-	"MyJavaServiceSampleJavaOperation": {
-		"name": "MyJavaServiceSampleJavaOperation",
-		"type": "java.lang.String",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "MyJavaService",
-		"operation": "sampleJavaOperation",
-		"startUpdate": false,
-		"autoUpdate": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "JavaService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "sampleJavaOperation",
-			"parameters": [],
-			"relativePath": "/myJava/sampleJavaOperation"
-		},
-		"_id": "wm-wm.ServiceVariable1432125273176"
-	},
-	"Artist_Image": {
-		"type": "string",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"dataValue": "bind:Widgets.livelist2.selecteditem.images.url"
-		},
-		"saveInPhonegap": false,
-		"category": "wm.Variable",
-		"_id": "wm-wm.Variable1432184377871",
-		"name": "Artist_Image"
-	},
-	"Twitter_headInvoke": {
-		"type": "twitter_head.RootResponse",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"api_key": "9DHD6YRBIEQATUGO2",
-			"id": "bind:Variables.Artist_Id.dataSet.dataValue",
-			"format": "json"
-		},
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "twitter_head",
-		"operation": "invoke",
-		"operationType": null,
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "RestService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "GET",
-			"name": "invoke",
-			"parameters": [
-				{
-					"name": "id",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "api_key",
-					"parameterType": "QUERY"
-				},
-				{
-					"name": "format",
-					"parameterType": "QUERY"
-				}
-			],
-			"relativePath": "/twitter_head/invoke"
-		},
-		"_id": "wm-wm.ServiceVariable1432184852091",
-		"name": "Twitter_headInvoke"
-	},
-	"twitter_heads": {
-		"type": "string",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": {
-			"dataValue": "bind:Variables.Twitter_headInvoke.dataSet.response.artist.twitter"
-		},
-		"saveInPhonegap": false,
-		"category": "wm.Variable",
-		"_id": "wm-wm.Variable1432186257854",
-		"name": "twitter_heads"
-	}
+  "MetabroadcastInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/metabroadcast/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "source",
+        "parameterType" : "query"
+      }, {
+        "name" : "annotations",
+        "parameterType" : "query"
+      }, {
+        "name" : "type",
+        "parameterType" : "query"
+      }, {
+        "name" : "key",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "metabroadcastRootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : false,
+    "saveInPhonegap" : false,
+    "dataBinding" : {
+      "source" : "pressassociation.com",
+      "annotations" : "brand_summary,broadcasts,channel,channels,channel_summary,description",
+      "type" : "item",
+      "key" : "c1e92985ec124202b7f07140bcde6e3f"
+    },
+    "_id" : "wm-wm.ServiceVariable1431600352006",
+    "operationType" : null,
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "MetabroadcastInvoke",
+    "service" : "metabroadcast",
+    "owner" : "App"
+  },
+  "Artist_name" : {
+    "isList" : false,
+    "category" : "wm.Variable",
+    "dataBinding" : {
+      "dataValue" : "bind:Widgets.livelist2.selecteditem.name"
+    },
+    "saveInPhonegap" : false,
+    "_id" : "wm-wm.Variable1432039596474",
+    "name" : "Artist_name",
+    "owner" : "App",
+    "type" : "string",
+    "dataSet" : {
+      "dataValue" : ""
+    }
+  },
+  "Twitter_headInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/twitter_head/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "query"
+      }, {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "format",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "twitter_head.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "saveInPhonegap" : false,
+    "dataBinding" : {
+      "id" : "bind:Variables.Artist_Id.dataSet.dataValue",
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "format" : "json"
+    },
+    "_id" : "wm-wm.ServiceVariable1432184852091",
+    "operationType" : null,
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "Twitter_headInvoke",
+    "service" : "twitter_head",
+    "owner" : "App"
+  },
+  "Artist_ImageInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/Artist_Image/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "query"
+      }, {
+        "name" : "results",
+        "parameterType" : "query"
+      }, {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "format",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "Artist_Image.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "saveInPhonegap" : false,
+    "dataBinding" : {
+      "id" : "bind:Variables.Artist_Id.dataSet.dataValue",
+      "results" : "10",
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "format" : "json"
+    },
+    "_id" : "wm-wm.ServiceVariable1432207476361",
+    "operationType" : null,
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "Artist_ImageInvoke",
+    "service" : "Artist_Image",
+    "owner" : "App"
+  },
+  "Artist_locInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/artist_loc/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "query"
+      }, {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "bucket",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "artist_loc.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "saveInPhonegap" : false,
+    "dataBinding" : {
+      "id" : "bind:Variables.Artist_Id.dataSet.dataValue",
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "bucket" : "artist_location"
+    },
+    "_id" : "wm-wm.ServiceVariable1432101532725",
+    "operationType" : null,
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "Artist_locInvoke",
+    "service" : "artist_loc",
+    "owner" : "App"
+  },
+  "Echonest_list_genres_50Invoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/echonest_list_genres_50/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "results",
+        "parameterType" : "query"
+      }, {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "format",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : true,
+    "type" : "echonest_list_genres_50.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : false,
+    "saveInPhonegap" : false,
+    "dataBinding" : {
+      "results" : "1500",
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "format" : "json"
+    },
+    "_id" : "wm-wm.ServiceVariable1432014905334",
+    "operationType" : null,
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "Echonest_list_genres_50Invoke",
+    "service" : "echonest_list_genres_50",
+    "owner" : "App"
+  },
+  "Artist_urlsInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/artist_urls/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "query"
+      }, {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "bucket",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "artist_urls.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "saveInPhonegap" : false,
+    "dataBinding" : {
+      "id" : "bind:Variables.Artist_Id.dataSet.dataValue",
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "bucket" : "urls"
+    },
+    "_id" : "wm-wm.ServiceVariable1432102737436",
+    "operationType" : null,
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "Artist_urlsInvoke",
+    "service" : "artist_urls",
+    "owner" : "App"
+  },
+  "twitter_heads" : {
+    "isList" : false,
+    "category" : "wm.Variable",
+    "dataBinding" : {
+      "dataValue" : "bind:Variables.Twitter_headInvoke.dataSet.response.artist.twitter"
+    },
+    "saveInPhonegap" : false,
+    "_id" : "wm-wm.Variable1432186257854",
+    "name" : "twitter_heads",
+    "owner" : "App",
+    "type" : "string",
+    "dataSet" : {
+      "dataValue" : ""
+    }
+  },
+  "Artist_bioInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/artist_bio/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "query"
+      }, {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "bucket",
+        "parameterType" : "query"
+      }, {
+        "name" : "format",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "artist_bio.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "saveInPhonegap" : false,
+    "dataBinding" : {
+      "id" : "bind:Variables.Artist_Id.dataSet.dataValue",
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "bucket" : "biographies",
+      "format" : "json"
+    },
+    "_id" : "wm-wm.ServiceVariable1432101429834",
+    "operationType" : null,
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "Artist_bioInvoke",
+    "service" : "artist_bio",
+    "owner" : "App"
+  },
+  "Artist_videosInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/artist_videos/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "query"
+      }, {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "bucket",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "artist_videos.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "saveInPhonegap" : false,
+    "dataBinding" : {
+      "id" : "bind:Variables.Artist_Id.dataSet.dataValue",
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "bucket" : "video"
+    },
+    "_id" : "wm-wm.ServiceVariable1432103876032",
+    "operationType" : null,
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "Artist_videosInvoke",
+    "service" : "artist_videos",
+    "owner" : "App"
+  },
+  "Echonest_images_nameInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "onSuccess" : "Javascript",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/echonest_images_name/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "bucket",
+        "parameterType" : "query"
+      }, {
+        "name" : "name",
+        "parameterType" : "query"
+      }, {
+        "name" : "format",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "echonest_images_name.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "saveInPhonegap" : false,
+    "dataBinding" : {
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "name" : "bind:Widgets.select3.datavalue",
+      "bucket" : "images",
+      "format" : "json"
+    },
+    "_id" : "wm-wm.ServiceVariable1432029974727",
+    "operationType" : null,
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "Echonest_images_nameInvoke",
+    "service" : "echonest_images_name",
+    "owner" : "App"
+  },
+  "MyJavaServiceSampleJavaOperation" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "httpMethod" : "get",
+      "relativePath" : "/myJava/sampleJavaOperation",
+      "name" : "sampleJavaOperation",
+      "parameters" : [ ]
+    },
+    "serviceType" : "JavaService",
+    "startUpdate" : false,
+    "type" : "java.lang.String",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "sampleJavaOperation",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : false,
+    "saveInPhonegap" : false,
+    "dataBinding" : { },
+    "_id" : "wm-wm.ServiceVariable1432125273176",
+    "operationType" : null,
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "MyJavaServiceSampleJavaOperation",
+    "service" : "MyJavaService",
+    "owner" : "App"
+  },
+  "Artist_Id" : {
+    "isList" : false,
+    "category" : "wm.Variable",
+    "dataBinding" : {
+      "dataValue" : "bind:Widgets.livelist2.selecteditem.id"
+    },
+    "saveInPhonegap" : false,
+    "_id" : "wm-wm.Variable1432034545668",
+    "name" : "Artist_Id",
+    "owner" : "App",
+    "type" : "string",
+    "dataSet" : {
+      "dataValue" : ""
+    }
+  },
+  "goToPage-Profile" : {
+    "operation" : "gotoPage",
+    "pageName" : "Profile",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : { },
+    "_id" : "wm-wm.NavigationVariable1432030624934",
+    "name" : "goToPage-Profile",
+    "owner" : "App"
+  },
+  "imageVariable" : {
+    "isList" : false,
+    "category" : "wm.Variable",
+    "dataBinding" : {
+      "dataValue" : "http://www.hdwallpapers.in/walls/2011_kung_fu_panda-wide.jpg"
+    },
+    "saveInPhonegap" : false,
+    "_id" : "wm-wm.Variable1431666424925",
+    "name" : "imageVariable",
+    "owner" : "App",
+    "type" : "string",
+    "dataSet" : {
+      "dataValue" : ""
+    }
+  },
+  "Artist_videoInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/artist_video/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "query"
+      }, {
+        "name" : "results",
+        "parameterType" : "query"
+      }, {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "format",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "artist_video.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : false,
+    "saveInPhonegap" : false,
+    "dataBinding" : {
+      "id" : "ARH6W4X1187B99274F",
+      "results" : "1",
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "format" : "json"
+    },
+    "_id" : "wm-wm.ServiceVariable1431956667125",
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "Artist_videoInvoke",
+    "service" : "artist_video",
+    "owner" : "App"
+  },
+  "goToPage-Main" : {
+    "operation" : "gotoPage",
+    "pageName" : "Main",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : { },
+    "_id" : "wm-wm.NavigationVariable1389180517517",
+    "name" : "goToPage-Main",
+    "owner" : "App"
+  },
+  "Artist_songsInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/artist_songs/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "query"
+      }, {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "format",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "artist_songs.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "saveInPhonegap" : false,
+    "dataBinding" : {
+      "id" : "bind:Variables.Artist_Id.dataSet.dataValue",
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "format" : "json"
+    },
+    "_id" : "wm-wm.ServiceVariable1431956717206",
+    "operationType" : null,
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "Artist_songsInvoke",
+    "service" : "artist_songs",
+    "owner" : "App"
+  },
+  "Artist_Image" : {
+    "isList" : false,
+    "category" : "wm.Variable",
+    "dataBinding" : {
+      "dataValue" : "bind:Widgets.livelist2.selecteditem.images.url"
+    },
+    "saveInPhonegap" : false,
+    "_id" : "wm-wm.Variable1432184377871",
+    "name" : "Artist_Image",
+    "owner" : "App",
+    "type" : "string",
+    "dataSet" : {
+      "dataValue" : ""
+    }
+  },
+  "supportedLocale" : {
+    "isList" : false,
+    "category" : "wm.Variable",
+    "dataBinding" : {
+      "en" : "",
+      "dataValue" : ""
+    },
+    "saveInPhonegap" : false,
+    "_id" : "wm-wm.Variable1402640443182",
+    "name" : "supportedLocale",
+    "owner" : "App",
+    "type" : "string",
+    "dataSet" : {
+      "en" : "English"
+    }
+  },
+  "artist" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/artist_data/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "query"
+      }, {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "bucket",
+        "parameterType" : "query"
+      }, {
+        "name" : "format",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "artist_data.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "saveInPhonegap" : false,
+    "dataBinding" : {
+      "id" : "",
+      "api_key" : "9DHD6YRBIEQATUGO2"
+    },
+    "_id" : "wm-wm.ServiceVariable1432037662206",
+    "operationType" : null,
+    "designMaxResults" : 10,
+    "name" : "artist",
+    "service" : "artist_data",
+    "owner" : "App"
+  },
+  "Artist_id_nameInvoke" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/artist_id_name/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "parameters" : [ {
+        "name" : "api_key",
+        "parameterType" : "query"
+      }, {
+        "name" : "name",
+        "parameterType" : "query"
+      }, {
+        "name" : "format",
+        "parameterType" : "query"
+      } ]
+    },
+    "serviceType" : "RestService",
+    "startUpdate" : false,
+    "type" : "artist_id_name.RootResponse",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "invoke",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "saveInPhonegap" : false,
+    "dataBinding" : {
+      "api_key" : "9DHD6YRBIEQATUGO2",
+      "name" : "bind:Widgets.select3.datavalue",
+      "format" : "json"
+    },
+    "_id" : "wm-wm.ServiceVariable1431956512830",
+    "operationType" : null,
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "Artist_id_nameInvoke",
+    "service" : "artist_id_name",
+    "owner" : "App"
+  }
 }

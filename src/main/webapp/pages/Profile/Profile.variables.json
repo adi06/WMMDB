@@ -1,1 +1,13 @@
-{}
+{
+	"twitter": {
+		"owner": "Page",
+		"operation": "gotoPage",
+		"pageName": "bind:Variables.Artist_urlsInvoke.dataSet.response.artist.urls.twitter_url",
+		"dataBinding": {
+			"pageName": ""
+		},
+		"category": "wm.NavigationVariable",
+		"_id": "wm-wm.NavigationVariable1432213100234",
+		"name": "twitter"
+	}
+}
